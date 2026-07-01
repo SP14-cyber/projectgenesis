@@ -7,24 +7,20 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
 *{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#030712;--bg2:#0d1117;--bg3:#161b22;--bg4:#1c2230;--b1:rgba(255,255,255,0.07);--b2:rgba(255,255,255,0.14);--tx:#e6edf3;--tx2:#8b949e;--tx3:#484f58;--ac:#58a6ff;--pu:#bc8cff;--gr:#3fb950;--or:#f0883e;--re:#ff7b72;--go:#e3b341}
+:root{--bg:#030712;--bg2:#0d1117;--bg3:#161b22;--bg4:#1c2230;--b1:rgba(255,255,255,.07);--b2:rgba(255,255,255,.14);--tx:#e6edf3;--tx2:#8b949e;--tx3:#484f58;--ac:#58a6ff;--pu:#bc8cff;--gr:#3fb950;--or:#f0883e;--re:#ff7b72;--go:#e3b341}
 html,body{height:100%;overflow:hidden;font-family:Inter,sans-serif;background:var(--bg);color:var(--tx);font-size:13px}
-/* HEADER */
 #hdr{position:fixed;top:0;left:0;right:0;height:52px;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 16px;background:rgba(3,7,18,.95);border-bottom:1px solid var(--b2);backdrop-filter:blur(16px)}
-.logo{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;background:linear-gradient(135deg,#58a6ff,#bc8cff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;cursor:pointer;letter-spacing:-.5px;flex-shrink:0}
-.logo em{font-style:normal;font-size:11px;opacity:.4;font-weight:300;-webkit-text-fill-color:rgba(139,148,158,.55);letter-spacing:0}
-#hnav{display:none;gap:3px;flex-wrap:nowrap}
+.logo{font-family:'Space Grotesk',sans-serif;font-size:17px;font-weight:700;background:linear-gradient(135deg,#58a6ff,#bc8cff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;cursor:pointer;letter-spacing:-.5px}
+.logo small{font-size:11px;opacity:.4;font-weight:300;-webkit-text-fill-color:rgba(139,148,158,.55)}
+#hnav{display:none;gap:3px}
 .nb{background:none;border:1px solid var(--b2);color:var(--tx2);padding:4px 11px;border-radius:5px;font-size:11px;cursor:pointer;font-family:Inter,sans-serif;transition:all .18s;white-space:nowrap}
-.nb:hover{background:rgba(88,166,255,.1);color:var(--ac);border-color:var(--ac)}
-.nb.on{background:rgba(88,166,255,.14);color:var(--ac);border-color:var(--ac)}
-#hrgt{display:flex;align-items:center;gap:6px;flex-shrink:0}
-#msw{display:none;align-items:center;background:var(--bg3);border:1px solid var(--b2);border-radius:7px;padding:0 10px;height:30px;gap:6px;width:180px}
+.nb:hover,.nb.on{background:rgba(88,166,255,.12);color:var(--ac);border-color:var(--ac)}
+#hrgt{display:flex;align-items:center;gap:6px}
+#msw{display:none;align-items:center;background:var(--bg3);border:1px solid var(--b2);border-radius:7px;padding:0 10px;height:30px;gap:6px;width:190px}
 #msw input{background:none;border:none;outline:none;color:var(--tx);font-size:12px;font-family:Inter,sans-serif;width:100%}
-#msw input::placeholder{color:var(--tx3)}
 .mgo{background:var(--ac);color:#000;border:none;padding:3px 10px;border-radius:4px;font-size:11px;font-weight:600;cursor:pointer}
 .ib{background:none;border:1px solid var(--b2);color:var(--tx2);width:30px;height:30px;border-radius:5px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:13px;transition:all .18s;font-family:Inter,sans-serif}
 .ib:hover{background:var(--bg3);color:var(--tx)}
-/* HERO */
 #hero{position:fixed;inset:52px 0 0 0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:0 24px;text-align:center;background:var(--bg);overflow:hidden}
 #hero canvas{position:absolute;inset:0;z-index:0;pointer-events:none}
 #hero>*:not(canvas){position:relative;z-index:1}
@@ -34,44 +30,41 @@ html,body{height:100%;overflow:hidden;font-family:Inter,sans-serif;background:va
 @keyframes kspin{to{transform:rotate(360deg)}}
 #hero h1{font-family:'Space Grotesk',sans-serif;font-size:clamp(30px,4.5vw,64px);font-weight:700;line-height:1.05;letter-spacing:-2px;margin-bottom:16px}
 #hero h1 em{font-style:normal;background:linear-gradient(135deg,#58a6ff 0%,#bc8cff 50%,#f0883e 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-#hero p{font-size:15px;color:var(--tx2);max-width:520px;line-height:1.7;margin-bottom:28px}
-.swrap{width:100%;max-width:640px;margin-bottom:14px}
+#hero p{font-size:15px;color:var(--tx2);max-width:560px;line-height:1.7;margin-bottom:28px}
+.swrap{width:100%;max-width:680px;margin-bottom:14px}
 .sbar{display:flex;align-items:center;gap:8px;background:var(--bg3);border:1px solid var(--b2);border-radius:12px;padding:10px 14px}
 .sbar:focus-within{border-color:var(--ac);box-shadow:0 0 0 3px rgba(88,166,255,.1)}
 .sbar input{flex:1;background:none;border:none;outline:none;color:var(--tx);font-size:15px;font-family:Inter,sans-serif}
 .sbar input::placeholder{color:var(--tx3)}
 .sbtn{background:linear-gradient(135deg,var(--ac),#7c3aed);color:#fff;border:none;padding:8px 18px;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;font-family:Inter,sans-serif;white-space:nowrap}
 .sbtn:hover{opacity:.85}
-.qtags{display:flex;gap:6px;flex-wrap:wrap;justify-content:center}
+.qtags{display:flex;gap:6px;flex-wrap:wrap;justify-content:center;margin-top:10px}
 .qt{background:var(--bg3);border:1px solid var(--b1);padding:4px 12px;border-radius:16px;font-size:11px;color:var(--tx2);cursor:pointer;transition:all .18s}
 .qt:hover{border-color:var(--ac);color:var(--ac)}
 .hsts{display:flex;gap:26px;margin-top:26px;padding-top:22px;border-top:1px solid var(--b1)}
 .hst{text-align:center}
 .hstv{font-family:'Space Grotesk',sans-serif;font-size:20px;font-weight:700;color:var(--ac)}
 .hstl{font-size:10px;color:var(--tx3);margin-top:1px}
-/* LOADING */
 #loading{position:fixed;inset:52px 0 0 0;z-index:300;display:none;flex-direction:column;align-items:center;justify-content:center;background:var(--bg);gap:16px}
 .lring{width:48px;height:48px;border:2px solid var(--b2);border-top-color:var(--ac);border-radius:50%;animation:kspin .7s linear infinite}
-#lstps{display:flex;flex-direction:column;gap:5px;min-width:240px}
+.lring-sm{width:14px;height:14px;border:2px solid var(--b2);border-top-color:var(--ac);border-radius:50%;animation:kspin .7s linear infinite;flex-shrink:0}
+#lstps{display:flex;flex-direction:column;gap:5px;min-width:280px}
 .lstp{font-size:12px;color:var(--tx3);display:flex;align-items:center;gap:7px;transition:color .3s}
 .lstp.on{color:var(--tx)}.lstp.done{color:var(--gr)}
 .sd{width:5px;height:5px;border-radius:50%;background:var(--tx3);flex-shrink:0;transition:background .3s}
 .lstp.on .sd{background:var(--ac);animation:kpu .9s ease-in-out infinite}
 .lstp.done .sd{background:var(--gr)}
-/* APP */
 #app{position:fixed;inset:52px 0 0 0;display:none}
 #app.on{display:flex}
-/* SIDEBAR */
-#sb{width:290px;flex-shrink:0;border-right:1px solid var(--b1);overflow-y:auto;background:var(--bg2);display:flex;flex-direction:column;height:100%}
-#sb::-webkit-scrollbar{width:3px}
-#sb::-webkit-scrollbar-thumb{background:var(--b2);border-radius:2px}
+#sb{width:300px;flex-shrink:0;border-right:1px solid var(--b1);overflow-y:auto;background:var(--bg2);height:100%}
+#sb::-webkit-scrollbar{width:3px}#sb::-webkit-scrollbar-thumb{background:var(--b2);border-radius:2px}
 .sec{padding:12px;border-bottom:1px solid var(--b1)}
 .stt{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3);font-weight:700;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between}
 .stb{background:none;border:none;color:var(--tx3);cursor:pointer;font-size:10px;padding:2px 6px;border-radius:3px;font-family:Inter,sans-serif;transition:all .18s}
 .stb:hover{background:var(--bg3);color:var(--tx2)}
 .qchip{background:linear-gradient(135deg,rgba(88,166,255,.07),rgba(188,140,255,.07));border:1px solid rgba(88,166,255,.2);border-radius:7px;padding:9px 12px}
-.qchip .ql{font-size:9px;color:var(--tx3);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
-.qchip .qv{font-size:14px;font-weight:700;font-family:'Space Grotesk',sans-serif;color:var(--ac)}
+.ql{font-size:9px;color:var(--tx3);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+.qv{font-size:14px;font-weight:700;font-family:'Space Grotesk',sans-serif;color:var(--ac)}
 .stgrid{display:grid;grid-template-columns:1fr 1fr;gap:6px}
 .stcard{background:var(--bg3);border:1px solid var(--b1);border-radius:7px;padding:8px 10px}
 .stval{font-size:18px;font-weight:700;font-family:'Space Grotesk',sans-serif}
@@ -80,45 +73,35 @@ html,body{height:100%;overflow:hidden;font-family:Inter,sans-serif;background:va
 .fpill{display:flex;align-items:center;gap:4px;background:var(--bg3);border:1px solid var(--b1);padding:3px 8px;border-radius:10px;font-size:10px;color:var(--tx2);cursor:pointer;transition:all .18s}
 .fpill:hover,.fpill.on{border-color:var(--b2);color:var(--tx)}
 .fdot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
-/* GAP CARDS */
 .gapc{background:rgba(188,140,255,.03);border:1px solid rgba(188,140,255,.15);border-radius:7px;padding:9px 10px 9px 13px;margin-bottom:6px;cursor:pointer;transition:all .18s;position:relative}
 .gapc::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(180deg,var(--ac),var(--pu));border-radius:3px 0 0 3px}
 .gapc:hover{border-color:rgba(188,140,255,.35);transform:translateX(2px)}
 .gct{font-size:11px;font-weight:600;color:var(--tx);margin-bottom:2px}
 .gcd{font-size:10px;color:var(--tx2);line-height:1.5}
 .gcb{display:inline-flex;align-items:center;gap:3px;margin-top:4px;background:rgba(188,140,255,.1);border:1px solid rgba(188,140,255,.2);padding:1px 7px;border-radius:8px;font-size:9px;color:var(--pu)}
-/* HYPOTHESIS CARDS */
 .hcard{background:var(--bg3);border:1px solid var(--b1);border-radius:7px;padding:10px 10px 10px 13px;margin-bottom:6px;cursor:pointer;transition:all .18s;position:relative}
 .hcard:hover{border-color:var(--b2);background:var(--bg4)}
 .hbr{position:absolute;left:0;top:0;bottom:0;width:3px;border-radius:3px 0 0 3px}
 .htitle{font-size:11px;font-weight:600;margin-bottom:4px}
 .hdesc{font-size:10px;color:var(--tx2);line-height:1.55;margin-bottom:6px}
-.htgs{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:0}
+.htgs{display:flex;gap:4px;flex-wrap:wrap}
 .htg{font-size:9px;padding:2px 7px;border-radius:8px;font-weight:600}
-.htb{background:rgba(88,166,255,.12);color:var(--ac)}
-.htp{background:rgba(188,140,255,.12);color:var(--pu)}
-.hto{background:rgba(240,136,62,.12);color:var(--or)}
-.htg-gr{background:rgba(63,185,80,.12);color:var(--gr)}
+.htb{background:rgba(88,166,255,.12);color:var(--ac)}.htp{background:rgba(188,140,255,.12);color:var(--pu)}.hto{background:rgba(240,136,62,.12);color:var(--or)}
 .hexp{display:none;margin-top:8px;padding:8px;background:rgba(255,255,255,.025);border-radius:5px;font-size:10px;color:var(--tx2);line-height:1.6}
 .hcard.open .hexp{display:block}
-/* TIMELINE */
 .tlbox{padding-left:14px;border-left:1px solid var(--b2)}
-.tli{margin-bottom:12px;position:relative;cursor:pointer}
-.tli:hover .tlidesc{color:var(--tx)}
+.tli{margin-bottom:12px;position:relative}
 .tldot{position:absolute;left:-18px;top:3px;width:8px;height:8px;border-radius:50%;border:2px solid var(--bg2)}
 .tliyr{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
-.tlidesc{font-size:10px;color:var(--tx2);line-height:1.5;transition:color .18s}
-/* FEED */
+.tlidesc{font-size:10px;color:var(--tx2);line-height:1.5}
 .fdi{padding:8px 9px;border-radius:6px;margin-bottom:4px;cursor:pointer;transition:background .15s;border:1px solid transparent}
 .fdi:hover{background:var(--bg3);border-color:var(--b1)}
 .fdt{font-size:9px;color:var(--tx3);margin-bottom:2px}
 .fdtx{font-size:10px;line-height:1.5}
 .fdtg{display:inline-block;font-size:9px;padding:1px 6px;border-radius:6px;margin-top:3px;background:rgba(88,166,255,.08);color:var(--ac)}
-/* CENTER */
 #ctr{flex:1;position:relative;overflow:hidden}
 #gsvg{width:100%;height:100%;display:block;cursor:grab}
 #gsvg:active{cursor:grabbing}
-/* GRAPH OVERLAYS */
 .gleg{position:absolute;top:10px;left:10px;background:rgba(3,7,18,.9);border:1px solid var(--b1);border-radius:7px;padding:9px 11px;font-size:10px;backdrop-filter:blur(8px);z-index:10;pointer-events:none}
 .legr{display:flex;align-items:center;gap:6px;margin-bottom:4px;color:var(--tx2)}
 .legr:last-child{margin-bottom:0}
@@ -126,27 +109,20 @@ html,body{height:100%;overflow:hidden;font-family:Inter,sans-serif;background:va
 .mtog{position:absolute;top:10px;left:50%;transform:translateX(-50%);display:flex;background:rgba(3,7,18,.92);border:1px solid var(--b2);border-radius:7px;overflow:hidden;z-index:10;backdrop-filter:blur(8px)}
 .mbt{background:none;border:none;color:var(--tx2);padding:5px 13px;cursor:pointer;font-size:11px;font-family:Inter,sans-serif;transition:all .15s;border-right:1px solid var(--b1)}
 .mbt:last-child{border-right:none}
-.mbt:hover{color:var(--tx)}
-.mbt.on{background:rgba(88,166,255,.14);color:var(--ac)}
+.mbt:hover{color:var(--tx)}.mbt.on{background:rgba(88,166,255,.14);color:var(--ac)}
 .ghint{position:absolute;top:10px;right:10px;background:rgba(3,7,18,.9);border:1px solid var(--b1);border-radius:7px;padding:6px 10px;font-size:10px;color:var(--tx3);backdrop-filter:blur(8px);z-index:10;pointer-events:none}
 .gctrls{position:absolute;bottom:14px;right:14px;display:flex;gap:5px;z-index:10}
 .gctrl{background:rgba(13,17,23,.92);border:1px solid var(--b2);color:var(--tx2);width:34px;height:34px;border-radius:7px;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;backdrop-filter:blur(8px);font-family:Inter,sans-serif;transition:all .18s}
-.gctrl:hover{background:var(--bg3);color:var(--tx)}
-.gctrl.on{background:rgba(88,166,255,.14);color:var(--ac);border-color:var(--ac)}
-/* OVERLAY PANELS */
+.gctrl:hover{background:var(--bg3);color:var(--tx)}.gctrl.on{background:rgba(88,166,255,.14);color:var(--ac);border-color:var(--ac)}
 .overlay{position:absolute;inset:0;background:var(--bg);display:none;overflow-y:auto;padding:18px;z-index:20}
 .overlay.on{display:block}
 .ovhdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
 .ovtitle{font-family:'Space Grotesk',sans-serif;font-size:16px;font-weight:700}
-/* COMPARE */
 .cmgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(175px,1fr));gap:8px;margin-top:10px}
 .cmc{background:var(--bg2);border:1px solid var(--b2);border-radius:9px;padding:13px}
 .cmh{font-family:'Space Grotesk',sans-serif;font-size:13px;font-weight:700;margin-bottom:8px}
 .cmrow{display:flex;justify-content:space-between;padding:4px 0;border-bottom:1px solid var(--b1);font-size:10px}
-.cmrow:last-child{border:none;padding-bottom:0}
-.cmk{color:var(--tx2)}
-.cmv{color:var(--tx);font-weight:500}
-/* METRICS */
+.cmrow:last-child{border:none}.cmk{color:var(--tx2)}.cmv{color:var(--tx);font-weight:500}
 .metgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:14px}
 .metcard{background:var(--bg2);border:1px solid var(--b2);border-radius:9px;padding:13px}
 .metval{font-family:'Space Grotesk',sans-serif;font-size:26px;font-weight:700;margin-bottom:3px}
@@ -156,17 +132,12 @@ html,body{height:100%;overflow:hidden;font-family:Inter,sans-serif;background:va
 .metsub{font-size:9px;color:var(--tx3)}
 .densrow{margin-bottom:7px}
 .denshead{display:flex;justify-content:space-between;font-size:10px;color:var(--tx2);margin-bottom:3px}
-.densbar{height:3px;background:var(--b2);border-radius:2px;overflow:hidden}
+.densbar-wrap{height:3px;background:var(--b2);border-radius:2px;overflow:hidden}
 .densfill{height:100%;border-radius:2px}
-/* TIMELINE VIEW */
-.tlview{padding:20px 0}
-/* RIGHT PANEL */
-#rp{width:265px;flex-shrink:0;border-left:1px solid var(--b1);background:var(--bg2);overflow-y:auto;height:100%}
-#rp::-webkit-scrollbar{width:3px}
-#rp::-webkit-scrollbar-thumb{background:var(--b2);border-radius:2px}
+#rp{width:290px;flex-shrink:0;border-left:1px solid var(--b1);background:var(--bg2);overflow-y:auto;height:100%}
+#rp::-webkit-scrollbar{width:3px}#rp::-webkit-scrollbar-thumb{background:var(--b2);border-radius:2px}
 .rpsec{padding:12px;border-bottom:1px solid var(--b1)}
 .rptit{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:var(--tx3);font-weight:700;margin-bottom:8px}
-/* NODE INSPECTOR */
 .ndet{background:linear-gradient(135deg,rgba(88,166,255,.05),rgba(188,140,255,.05));border:1px solid rgba(88,166,255,.16);border-radius:7px;padding:11px}
 .ndname{font-size:13px;font-weight:700;font-family:'Space Grotesk',sans-serif;margin-bottom:2px}
 .ndfield{font-size:10px;color:var(--tx2);margin-bottom:7px}
@@ -180,56 +151,53 @@ html,body{height:100%;overflow:hidden;font-family:Inter,sans-serif;background:va
 .ndbtn:hover{background:var(--bg4);color:var(--tx);border-color:var(--b2)}
 .ndbtn.pr{background:rgba(88,166,255,.1);border-color:rgba(88,166,255,.25);color:var(--ac)}
 .ndbtn.pr:hover{background:rgba(88,166,255,.18)}
-/* PAPERS */
-.pcard{background:var(--bg3);border:1px solid var(--b1);border-radius:6px;padding:8px 10px;margin-bottom:5px;cursor:pointer;transition:all .18s}
+.pcard{background:var(--bg3);border:1px solid var(--b1);border-radius:7px;padding:11px 13px;margin-bottom:7px;cursor:pointer;transition:all .18s}
 .pcard:hover{border-color:var(--b2);background:var(--bg4)}
-.ptit{font-size:10px;font-weight:600;margin-bottom:2px;line-height:1.4}
-.pmeta{font-size:9px;color:var(--tx3);display:flex;gap:6px}
-.pcite{color:var(--ac)}
-/* ALL CONCEPTS */
+.pcard-title{font-size:11px;font-weight:600;line-height:1.4;color:var(--tx);margin-bottom:5px}
+.pcard-authors{font-size:10px;color:var(--tx3);margin-bottom:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.pcard-venue{font-size:10px;color:var(--tx3);margin-bottom:6px}
+.pcard-venue span{color:var(--ac);font-weight:600}
+.pcard-abstract{display:none;font-size:10px;color:var(--tx2);line-height:1.6;margin-bottom:8px;border-top:1px solid var(--b1);padding-top:8px;margin-top:5px}
+.pcard.expanded .pcard-abstract{display:block}
+.pcard-btns{display:flex;gap:5px}
+.pbtn{background:var(--bg4);border:1px solid var(--b2);color:var(--tx2);padding:4px 10px;border-radius:4px;font-size:10px;cursor:pointer;font-family:Inter,sans-serif;transition:all .18s;text-decoration:none;display:inline-block;text-align:center}
+.pbtn:hover{color:var(--tx)}
+.pbtn.bl{background:rgba(88,166,255,.1);color:var(--ac);border-color:rgba(88,166,255,.3)}
+.pbtn.bl:hover{background:rgba(88,166,255,.18)}
+.papers-loading{display:flex;align-items:center;gap:8px;font-size:11px;color:var(--tx3);padding:8px 0}
+.papers-err{font-size:11px;color:var(--re);padding:8px 0}
 .ritem{display:flex;align-items:center;gap:7px;padding:6px 8px;border-radius:5px;cursor:pointer;transition:background .15s;margin-bottom:2px}
 .ritem:hover{background:var(--bg3)}
 .rdot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 .rname{font-size:11px;font-weight:500}
 .rfield{font-size:9px;color:var(--tx3)}
-/* EXPORT */
 .exrow{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:7px}
 .exbtn{flex:1;min-width:60px;background:var(--bg3);border:1px solid var(--b2);color:var(--tx2);padding:6px 8px;border-radius:6px;font-size:11px;cursor:pointer;font-family:Inter,sans-serif;transition:all .18s;text-align:center}
 .exbtn:hover{background:var(--bg4);color:var(--tx)}
 .exbtn.hi{background:rgba(88,166,255,.07);border-color:rgba(88,166,255,.25);color:var(--ac)}
 .exbtn.hi:hover{background:rgba(88,166,255,.15)}
-/* PROGRESS */
 .progrow{margin-bottom:8px}
 .proglbl{display:flex;justify-content:space-between;font-size:9px;color:var(--tx2);margin-bottom:3px}
 .progbar{height:3px;background:var(--b2);border-radius:2px;overflow:hidden}
-.progfill{height:100%;border-radius:2px;transition:width 1s ease}
-/* TOOLTIP */
-#tt{position:fixed;background:var(--bg4);border:1px solid var(--b2);border-radius:9px;padding:10px 12px;font-size:11px;pointer-events:none;z-index:999;max-width:210px;box-shadow:0 8px 32px rgba(0,0,0,.7);opacity:0;transition:opacity .1s}
-#tt.on{opacity:1}
-#tt .ttn{font-weight:700;font-size:12px;margin-bottom:2px}
-#tt .ttf{color:var(--tx2);margin-bottom:2px}
-#tt .ttp{color:var(--tx3);font-size:10px}
-#tt .ttg{color:var(--pu);font-size:10px;margin-top:3px;font-weight:600;display:none}
-/* NOTIF */
-#notif{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:var(--bg4);border:1px solid var(--b2);border-radius:7px;padding:8px 16px;font-size:12px;z-index:9999;opacity:0;transition:opacity .25s;pointer-events:none;white-space:nowrap;max-width:90vw}
-#notif.on{opacity:1}
-/* AI MODAL */
+.progfill{height:100%;border-radius:2px;transition:width .8s ease}
+#pm{position:fixed;inset:0;z-index:600;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.8);backdrop-filter:blur(4px)}
+#pm.on{display:flex}
+.pmbox{background:var(--bg2);border:1px solid var(--b2);border-radius:12px;width:680px;max-width:96vw;max-height:85vh;display:flex;flex-direction:column;overflow:hidden}
+.pmhd{padding:13px 17px;border-bottom:1px solid var(--b1);display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.pmtitle{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700}
+.pmcl{background:none;border:1px solid var(--b1);color:var(--tx2);width:26px;height:26px;border-radius:5px;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center}
+.pmcl:hover{background:var(--bg3);color:var(--tx)}
+#pmbody{padding:16px;overflow-y:auto;flex:1}
+#pmbody::-webkit-scrollbar{width:3px}#pmbody::-webkit-scrollbar-thumb{background:var(--b2);border-radius:2px}
 #aim{position:fixed;inset:0;z-index:500;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.75);backdrop-filter:blur(4px)}
 #aim.on{display:flex}
-#papers-modal.on{display:flex!important}
-.abox{background:var(--bg2);border:1px solid var(--b2);border-radius:12px;width:580px;max-width:95vw;max-height:78vh;display:flex;flex-direction:column;overflow:hidden}
+.abox{background:var(--bg2);border:1px solid var(--b2);border-radius:12px;width:600px;max-width:95vw;max-height:80vh;display:flex;flex-direction:column;overflow:hidden}
 .ahd{padding:13px 17px;border-bottom:1px solid var(--b1);display:flex;align-items:center;justify-content:space-between}
 .ahtitle{font-family:'Space Grotesk',sans-serif;font-size:15px;font-weight:700}
-.acl{background:none;border:1px solid var(--b1);color:var(--tx2);width:26px;height:26px;border-radius:5px;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;transition:all .18s}
+.acl{background:none;border:1px solid var(--b1);color:var(--tx2);width:26px;height:26px;border-radius:5px;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center}
 .acl:hover{background:var(--bg3);color:var(--tx)}
 #abdy{padding:16px;overflow-y:auto;flex:1}
-#abdy::-webkit-scrollbar{width:3px}
-#abdy::-webkit-scrollbar-thumb{background:var(--b2);border-radius:2px}
-.atk{display:flex;align-items:center;gap:7px;color:var(--tx2);font-size:12px;margin-bottom:8px}
-.adts span{display:inline-block;width:4px;height:4px;background:var(--ac);border-radius:50%;animation:kbo 1.2s ease-in-out infinite}
-.adts span:nth-child(2){animation-delay:.2s}
-.adts span:nth-child(3){animation-delay:.4s}
-@keyframes kbo{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}}
+#abdy::-webkit-scrollbar{width:3px}#abdy::-webkit-scrollbar-thumb{background:var(--b2);border-radius:2px}
 #art{font-size:12px;line-height:1.8;color:var(--tx)}
 #art h4{font-size:13px;font-weight:600;color:var(--ac);margin:10px 0 5px}
 #art h4:first-child{margin-top:0}
@@ -237,18 +205,27 @@ html,body{height:100%;overflow:hidden;font-family:Inter,sans-serif;background:va
 #art ul{padding-left:14px;margin-bottom:8px}
 #art li{margin-bottom:3px;color:var(--tx2)}
 #art strong{color:var(--tx);font-weight:600}
+.ai-thinking{display:flex;align-items:center;gap:10px;color:var(--tx2);font-size:12px}
+.dots span{display:inline-block;width:5px;height:5px;background:var(--ac);border-radius:50%;animation:kbo 1.2s ease-in-out infinite}
+.dots span:nth-child(2){animation-delay:.2s}.dots span:nth-child(3){animation-delay:.4s}
+@keyframes kbo{0%,80%,100%{transform:translateY(0)}40%{transform:translateY(-5px)}}
 .airow{padding:10px 16px;border-top:1px solid var(--b1);display:flex;gap:7px}
 .aiinp{flex:1;background:var(--bg3);border:1px solid var(--b2);border-radius:7px;padding:7px 10px;color:var(--tx);font-size:12px;font-family:Inter,sans-serif;outline:none}
 .aiinp:focus{border-color:var(--ac)}
 .aisnd{background:var(--ac);color:#000;border:none;padding:7px 14px;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;font-family:Inter,sans-serif}
-.aisnd:hover{background:#79c0ff}
+#tt{position:fixed;background:var(--bg4);border:1px solid var(--b2);border-radius:9px;padding:10px 12px;font-size:11px;pointer-events:none;z-index:999;max-width:220px;box-shadow:0 8px 32px rgba(0,0,0,.7);opacity:0;transition:opacity .1s}
+#tt.on{opacity:1}
+#tt .ttn{font-weight:700;font-size:12px;margin-bottom:2px}
+#tt .ttf{color:var(--tx2);margin-bottom:2px}
+#tt .ttp{color:var(--tx3);font-size:10px}
+#tt .ttg{color:var(--pu);font-size:10px;margin-top:3px;font-weight:600;display:none}
+#notif{position:fixed;bottom:16px;left:50%;transform:translateX(-50%);background:var(--bg4);border:1px solid var(--b2);border-radius:7px;padding:8px 16px;font-size:12px;z-index:9999;opacity:0;transition:opacity .25s;pointer-events:none;white-space:nowrap;max-width:90vw}
+#notif.on{opacity:1}
 </style>
 </head>
 <body>
-
-<!-- HEADER -->
 <div id="hdr">
-  <div class="logo" onclick="goHome()">GENESIS <em>// Knowledge Navigator</em></div>
+  <div class="logo" onclick="goHome()">GENESIS <small>// Knowledge Navigator</small></div>
   <div id="hnav" style="display:flex">
     <button class="nb on" id="nv0" onclick="setView('explore',0)">🔭 Explore</button>
     <button class="nb" id="nv1" onclick="setView('gaps',1)">◆ Gaps</button>
@@ -258,93 +235,50 @@ html,body{height:100%;overflow:hidden;font-family:Inter,sans-serif;background:va
     <button class="nb" id="nv5" onclick="openMetrics()">📊 Metrics</button>
   </div>
   <div id="hrgt">
-    <div id="msw">
-      <span style="color:var(--tx3)">⌕</span>
-      <input id="msin" type="text" placeholder="New query…" />
-      <button class="mgo" onclick="runMini()">Go</button>
-    </div>
-    <button class="ib" title="AI Assistant" onclick="openAI('')">🤖</button>
-    <button class="ib" title="Export data" onclick="toggleExport()">↗</button>
-    <button class="ib" title="Toggle dark/light" onclick="toggleTheme()">🌓</button>
+    <div id="msw"><span style="color:var(--tx3);font-size:12px">⌕</span><input id="msin" type="text" placeholder="New query…" /><button class="mgo" onclick="runMini()">Go</button></div>
+    <button class="ib" onclick="openAIModal('')">🤖</button>
+    <button class="ib" onclick="toggleExport()">↗</button>
+    <button class="ib" onclick="toggleTheme()">🌓</button>
   </div>
 </div>
-
-<!-- HERO -->
 <div id="hero">
   <canvas id="sc"></canvas>
-  <div class="hbadge"><div class="hpulse"></div>Live · 200M+ Papers Mapped</div>
+  <div class="hbadge"><div class="hpulse"></div>Live · Real Papers via Semantic Scholar API</div>
   <h1>What does humanity need<br>to <em>invent next?</em></h1>
-  <p>Genesis maps the entire frontier of human knowledge — finding hidden connections, identifying unexplored gaps, and generating novel research directions before anyone is looking there.</p>
+  <p>Genesis maps the frontier of human knowledge — finding hidden connections and unexplored gaps. Every paper is fetched live from Semantic Scholar. No fake data.</p>
   <div class="swrap">
     <div class="sbar">
       <span style="color:var(--tx3);font-size:16px;flex-shrink:0">⬡</span>
-      <input id="hi" type="text" placeholder="Enter any concept, technology, disease, or problem…" />
+      <input id="hi" type="text" placeholder="Enter any concept, disease, technology, or problem…" />
       <button class="sbtn" onclick="go()">Explore →</button>
     </div>
-    <div class="qtags" style="margin-top:10px">
+    <div class="qtags">
       <span class="qt" onclick="qs('Fusion Energy')">⚡ Fusion Energy</span>
-      <span class="qt" onclick="qs('Alzheimer\'s Disease')">🧠 Alzheimer's</span>
+      <span class="qt" onclick="qs('Alzheimer Disease')">🧠 Alzheimer's</span>
       <span class="qt" onclick="qs('Quantum Computing')">⚛ Quantum Computing</span>
-      <span class="qt" onclick="qs('CRISPR Gene Editing')">🧬 CRISPR</span>
+      <span class="qt" onclick="qs('CRISPR gene editing')">🧬 CRISPR</span>
       <span class="qt" onclick="qs('Climate Change')">🌍 Climate Change</span>
       <span class="qt" onclick="qs('Artificial General Intelligence')">🤖 AGI</span>
     </div>
   </div>
   <div class="hsts">
     <div class="hst"><div class="hstv">200M+</div><div class="hstl">Papers Indexed</div></div>
-    <div class="hst"><div class="hstv">47K</div><div class="hstl">Gaps Found</div></div>
-    <div class="hst"><div class="hstv">12K</div><div class="hstl">Hypotheses</div></div>
-    <div class="hst"><div class="hstv">98</div><div class="hstl">Disciplines</div></div>
+    <div class="hst"><div class="hstv">Real</div><div class="hstl">Live Paper Data</div></div>
+    <div class="hst"><div class="hstv">AI</div><div class="hstl">Gap Detection</div></div>
+    <div class="hst"><div class="hstv">Free</div><div class="hstl">No API Key</div></div>
   </div>
 </div>
-
-<!-- LOADING -->
-<div id="loading">
-  <div class="lring"></div>
-  <div id="lstps"></div>
-</div>
-
-<!-- APP -->
+<div id="loading"><div class="lring"></div><div id="lstps"></div></div>
 <div id="app">
-  <!-- LEFT SIDEBAR -->
   <div id="sb">
-    <div class="sec">
-      <div class="stt">Query <button class="stb" onclick="goHome()">✕ New Search</button></div>
-      <div class="qchip"><div class="ql">Exploring</div><div class="qv" id="sbq">—</div></div>
-    </div>
-    <div class="sec">
-      <div class="stt">Statistics</div>
-      <div class="stgrid">
-        <div class="stcard"><div class="stval" id="stn" style="color:var(--ac)">—</div><div class="stlbl">Concepts</div></div>
-        <div class="stcard"><div class="stval" id="ste" style="color:var(--pu)">—</div><div class="stlbl">Connections</div></div>
-        <div class="stcard"><div class="stval" id="stf" style="color:var(--or)">—</div><div class="stlbl">Fields</div></div>
-        <div class="stcard"><div class="stval" id="stg" style="color:var(--re)">—</div><div class="stlbl">Gaps Found</div></div>
-      </div>
-    </div>
-    <div class="sec">
-      <div class="stt">Filter by Field</div>
-      <div class="fpills" id="fpills"></div>
-    </div>
-    <div class="sec" id="secgaps">
-      <div class="stt">◆ Knowledge Gaps <span id="gcnt" style="color:var(--pu);font-size:9px"></span></div>
-      <div id="gcards"></div>
-    </div>
-    <div class="sec" id="sechyps">
-      <div class="stt">⚗ Hypotheses <button class="stb" onclick="openAI('')">Ask AI ↗</button></div>
-      <div id="hcards"></div>
-    </div>
-    <div class="sec" id="secsim">
-      <div class="stt">🌍 Civilization Impact</div>
-      <div id="simst" style="font-size:10px;color:var(--tx2);margin-bottom:8px"></div>
-      <div class="tlbox" id="tlbox"></div>
-    </div>
-    <div class="sec">
-      <div class="stt">Live Discovery Feed</div>
-      <div id="feed"></div>
-    </div>
+    <div class="sec"><div class="stt">Query <button class="stb" onclick="goHome()">✕ New</button></div><div class="qchip"><div class="ql">Exploring</div><div class="qv" id="sbq">—</div></div></div>
+    <div class="sec"><div class="stt">Statistics</div><div class="stgrid"><div class="stcard"><div class="stval" id="stn" style="color:var(--ac)">—</div><div class="stlbl">Concepts</div></div><div class="stcard"><div class="stval" id="ste" style="color:var(--pu)">—</div><div class="stlbl">Connections</div></div><div class="stcard"><div class="stval" id="stf" style="color:var(--or)">—</div><div class="stlbl">Fields</div></div><div class="stcard"><div class="stval" id="stg" style="color:var(--re)">—</div><div class="stlbl">Gaps</div></div></div></div>
+    <div class="sec"><div class="stt">Filter Field</div><div class="fpills" id="fpills"></div></div>
+    <div class="sec" id="secgaps"><div class="stt">◆ Knowledge Gaps <span id="gcnt" style="color:var(--pu);font-size:9px"></span></div><div id="gcards"></div></div>
+    <div class="sec" id="sechyps"><div class="stt">⚗ Hypotheses <button class="stb" onclick="openAIModal('')">Ask AI ↗</button></div><div id="hcards"></div></div>
+    <div class="sec" id="secsim"><div class="stt">🌍 Civilization Impact</div><div id="simst" style="font-size:10px;color:var(--tx2);margin-bottom:8px"></div><div class="tlbox" id="tlbox"></div></div>
+    <div class="sec"><div class="stt">Live Feed</div><div id="feed"></div></div>
   </div>
-
-  <!-- CENTER GRAPH -->
   <div id="ctr">
     <svg id="gsvg"></svg>
     <div class="gleg">
@@ -361,972 +295,284 @@ html,body{height:100%;overflow:hidden;font-family:Inter,sans-serif;background:va
     </div>
     <div class="ghint">Click a node to inspect · Drag to reposition</div>
     <div class="gctrls">
-      <button class="gctrl" title="Zoom in" onclick="zi()">+</button>
-      <button class="gctrl" title="Zoom out" onclick="zo()">−</button>
-      <button class="gctrl" title="Reset view" onclick="zr()">⌖</button>
-      <button class="gctrl on" id="lbtn" title="Toggle labels" onclick="tgl()">T</button>
-      <button class="gctrl" id="gbtn" title="Highlight gaps only" onclick="hgl()">◆</button>
-      <button class="gctrl" id="abtn" title="Pulse animation" onclick="toggleAnim()">▶</button>
+      <button class="gctrl" onclick="zi()">+</button><button class="gctrl" onclick="zo()">−</button>
+      <button class="gctrl" onclick="zr()">⌖</button><button class="gctrl on" id="lbtn" onclick="tgl()">T</button>
+      <button class="gctrl" id="gbtn" onclick="hgl()">◆</button><button class="gctrl" id="abtn" onclick="toggleAnim()">▶</button>
     </div>
-    <!-- Compare overlay -->
-    <div class="overlay" id="cmpv">
-      <div class="ovhdr">
-        <div class="ovtitle">⚖ Field Comparison</div>
-        <button class="nb" onclick="closeOverlay()">← Back to Graph</button>
-      </div>
-      <p style="font-size:11px;color:var(--tx2);margin-bottom:10px">Side-by-side analysis of all research fields in this knowledge graph.</p>
-      <div class="cmgrid" id="cmg"></div>
-    </div>
-    <!-- Metrics overlay -->
-    <div class="overlay" id="metv">
-      <div class="ovhdr">
-        <div class="ovtitle">📊 Graph Metrics</div>
-        <button class="nb" onclick="closeOverlay()">← Back to Graph</button>
-      </div>
-      <div class="metgrid" id="metgrid"></div>
-      <div style="font-size:11px;font-weight:600;color:var(--tx2);margin:12px 0 8px">Citation Density by Concept</div>
-      <div id="densbar"></div>
-    </div>
+    <div class="overlay" id="cmpv"><div class="ovhdr"><div class="ovtitle">⚖ Field Comparison</div><button class="nb" onclick="closeOverlay()">← Back</button></div><div class="cmgrid" id="cmg"></div></div>
+    <div class="overlay" id="metv"><div class="ovhdr"><div class="ovtitle">📊 Metrics</div><button class="nb" onclick="closeOverlay()">← Back</button></div><div class="metgrid" id="metgrid"></div><div style="font-size:11px;font-weight:600;color:var(--tx2);margin:12px 0 8px">Citation Density</div><div id="densbar"></div></div>
   </div>
-
-  <!-- RIGHT PANEL -->
   <div id="rp">
-    <div class="rpsec">
-      <div class="rptit">Node Inspector</div>
-      <div id="ninsp"><div style="font-size:11px;color:var(--tx3);text-align:center;padding:16px 0">Click any node to inspect</div></div>
-    </div>
-    <div class="rpsec">
-      <div class="rptit">Related Papers</div>
-      <div id="ppan"><div style="font-size:11px;color:var(--tx3);padding:4px 0">Select a node to see papers</div></div>
-    </div>
-    <div class="rpsec">
-      <div class="rptit">All Concepts</div>
-      <div id="rlist"></div>
-    </div>
+    <div class="rpsec"><div class="rptit">Node Inspector</div><div id="ninsp"><div style="font-size:11px;color:var(--tx3);text-align:center;padding:16px 0">Click any node to inspect</div></div></div>
+    <div class="rpsec"><div class="rptit">Real Papers <span style="font-size:9px;color:var(--tx3)">via Semantic Scholar</span></div><div id="ppan"><div style="font-size:11px;color:var(--tx3);padding:4px 0">Select a node to load real papers</div></div></div>
+    <div class="rpsec"><div class="rptit">All Concepts</div><div id="rlist"></div></div>
     <div class="rpsec" id="expp" style="display:none">
       <div class="rptit">Export</div>
-      <div class="exrow">
-        <button class="exbtn" onclick="exJSON()">📄 JSON</button>
-        <button class="exbtn" onclick="exCSV()">📊 CSV</button>
-        <button class="exbtn" onclick="exSVG()">🖼 SVG</button>
-      </div>
+      <div class="exrow"><button class="exbtn" onclick="exJSON()">📄 JSON</button><button class="exbtn" onclick="exCSV()">📊 CSV</button><button class="exbtn" onclick="exSVG()">🖼 SVG</button></div>
       <button class="exbtn hi" style="width:100%;margin-bottom:6px" onclick="cpReport()">📋 Copy Report</button>
-      <button class="exbtn hi" style="width:100%" onclick="openAI('')">🤖 Research Brief</button>
+      <button class="exbtn hi" style="width:100%" onclick="openAIModal('')">🤖 Research Brief</button>
     </div>
-    <div class="rpsec">
-      <div class="rptit">Paper Density</div>
-      <div id="progbars"></div>
-    </div>
+    <div class="rpsec"><div class="rptit">Paper Density</div><div id="progbars"></div></div>
   </div>
 </div>
-
-<!-- TOOLTIP -->
-<div id="tt">
-  <div class="ttn" id="ttn"></div>
-  <div class="ttf" id="ttf"></div>
-  <div class="ttp" id="ttp"></div>
-  <div class="ttg" id="ttg"></div>
-</div>
+<div id="pm" onclick="if(event.target===this)closePM()"><div class="pmbox"><div class="pmhd"><div class="pmtitle" id="pmtitle">📚 Papers</div><button class="pmcl" onclick="closePM()">✕</button></div><div id="pmbody"></div></div></div>
+<div id="aim" onclick="if(event.target===this)closeAI()"><div class="abox"><div class="ahd"><div class="ahtitle">🤖 Genesis AI Research Assistant</div><button class="acl" onclick="closeAI()">✕</button></div><div id="abdy"><div id="art"></div></div><div class="airow"><input class="aiinp" id="aiinp" type="text" placeholder="Ask about gaps, hypotheses, or the graph…" /><button class="aisnd" onclick="sendAI()">Send</button></div></div></div>
+<div id="tt"><div class="ttn" id="ttn"></div><div class="ttf" id="ttf"></div><div class="ttp" id="ttp"></div><div class="ttg" id="ttg"></div></div>
 <div id="notif"></div>
-
-<!-- AI MODAL -->
-<div id="aim" onclick="if(event.target===this)closeAI()">
-  <div class="abox">
-    <div class="ahd">
-      <div class="ahtitle">🤖 Genesis AI Research Assistant</div>
-      <button class="acl" onclick="closeAI()">✕</button>
-    </div>
-    <div id="abdy"><div id="art"></div></div>
-    <div class="airow">
-      <input class="aiinp" id="aiinp" type="text" placeholder="Ask about gaps, hypotheses, or the graph…" />
-      <button class="aisnd" onclick="sendAI()">Send</button>
-    </div>
-  </div>
-</div>
-
-<!-- PAPERS MODAL -->
-<div id="papers-modal" style="position:fixed;inset:0;z-index:600;display:none;align-items:center;justify-content:center;background:rgba(0,0,0,.78);backdrop-filter:blur(4px)" onclick="if(event.target===this)document.getElementById('papers-modal').classList.remove('on')">
-  <div style="background:var(--bg2);border:1px solid var(--b2);border-radius:12px;width:620px;max-width:95vw;max-height:80vh;display:flex;flex-direction:column;overflow:hidden">
-    <div style="padding:13px 17px;border-bottom:1px solid var(--b1);display:flex;align-items:center;justify-content:space-between">
-      <div id="pm-title" style="font-family:Space Grotesk,sans-serif;font-size:15px;font-weight:700"></div>
-      <div style="display:flex;gap:8px;align-items:center">
-        <span style="font-size:10px;color:var(--tx3)">Click Open ↗ to view · Cite to copy citation</span>
-        <button onclick="document.getElementById('papers-modal').classList.remove('on')" style="background:none;border:1px solid var(--b1);color:var(--tx2);width:26px;height:26px;border-radius:5px;cursor:pointer;font-size:14px;display:flex;align-items:center;justify-content:center;font-family:Inter,sans-serif">✕</button>
-      </div>
-    </div>
-    <div id="pm-body" style="padding:16px;overflow-y:auto;flex:1"></div>
-  </div>
-</div>
-
 <script>
-// ── STARS ──
-(function(){
-  var c=document.getElementById('sc'),x=c.getContext('2d'),s=[];
-  function resize(){c.width=innerWidth;c.height=innerHeight;s=[];for(var i=0;i<200;i++)s.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.3+.2,a:Math.random()*.5+.1,vx:(Math.random()-.5)*.03,vy:(Math.random()-.5)*.03});}
-  function draw(){x.clearRect(0,0,c.width,c.height);for(var i=0;i<s.length;i++){var p=s[i];p.x=(p.x+p.vx+c.width)%c.width;p.y=(p.y+p.vy+c.height)%c.height;x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);x.fillStyle='rgba(230,237,243,'+p.a+')';x.fill();}requestAnimationFrame(draw);}
-  window.addEventListener('resize',resize);resize();draw();
-})();
-
-// ── FIELD COLORS ──
-var FC={Physics:'#58a6ff',Materials:'#f0883e','Computer Science':'#bc8cff',AI:'#bc8cff',Nuclear:'#ff7b72',Economics:'#e3b341',Engineering:'#3fb950',Quantum:'#a371f7',Neuroscience:'#ec6547',Medicine:'#58a6ff',Immunology:'#ffa657',Microbiology:'#39d353',Genetics:'#d2a8ff','Cell Biology':'#79c0ff',Biochemistry:'#ffa198',Biology:'#56d364',Mathematics:'#f2cc60',Chemistry:'#80cefb','Earth Science':'#7ce38b',Research:'#58a6ff'};
+'use strict';
+// STARS
+(function(){var c=document.getElementById('sc'),x=c.getContext('2d'),s=[];function r(){c.width=innerWidth;c.height=innerHeight;s=[];for(var i=0;i<200;i++)s.push({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.3+.2,a:Math.random()*.5+.1,vx:(Math.random()-.5)*.03,vy:(Math.random()-.5)*.03});}function d(){x.clearRect(0,0,c.width,c.height);s.forEach(function(p){p.x=(p.x+p.vx+c.width)%c.width;p.y=(p.y+p.vy+c.height)%c.height;x.beginPath();x.arc(p.x,p.y,p.r,0,Math.PI*2);x.fillStyle='rgba(230,237,243,'+p.a+')';x.fill();});requestAnimationFrame(d);}window.addEventListener('resize',r);r();d();})();
+var FC={Physics:'#58a6ff',Materials:'#f0883e','Computer Science':'#bc8cff',AI:'#bc8cff',Nuclear:'#ff7b72',Economics:'#e3b341',Engineering:'#3fb950',Quantum:'#a371f7',Neuroscience:'#ec6547',Medicine:'#58a6ff',Immunology:'#ffa657',Microbiology:'#39d353',Genetics:'#d2a8ff','Cell Biology':'#79c0ff',Biochemistry:'#ffa198',Biology:'#56d364',Mathematics:'#f2cc60',Chemistry:'#80cefb','Earth Science':'#7ce38b',Research:'#58a6ff',Astrophysics:'#79c0ff',Robotics:'#3fb950',Policy:'#22d3ee'};
 function fc(f){return FC[f]||'#8b949e';}
+function esc(s){return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+var D=null,Q='',SZ=null,SL=true,GH=false,AF=null,ANIM=false,LIGHTMODE=false,NT=null;
+function sn(m,c){var el=document.getElementById('notif');el.textContent=m;el.style.borderColor=c||'rgba(255,255,255,.14)';el.classList.add('on');if(NT)clearTimeout(NT);NT=setTimeout(function(){el.classList.remove('on');},3000);}
 
-// ── KNOWLEDGE BASE ──
-var KB={};
-KB['Fusion Energy']={
-  nodes:[
-    {id:0,name:'Fusion Energy',field:'Physics',papers:12400,core:true,desc:'Combining light atomic nuclei to release enormous energy — the potential clean energy source of the century.'},
-    {id:1,name:'Plasma Physics',field:'Physics',papers:8900,desc:'Study of ionized gas states essential for containing fusion reactions at 100 million degrees Celsius.'},
-    {id:2,name:'Superconductors',field:'Materials',papers:15200,desc:'Zero-resistance conductors critical for building the powerful magnets needed to confine plasma.'},
-    {id:3,name:'Magnetic Confinement',field:'Physics',papers:4300,desc:'Using powerful magnetic fields to contain plasma away from reactor walls.'},
-    {id:4,name:'AI Optimization',field:'AI',papers:67000,desc:'Machine learning applied to optimize complex engineering systems in real time.'},
-    {id:5,name:'Materials Science',field:'Materials',papers:54000,desc:'Study and engineering of materials with desired structural and functional properties.'},
-    {id:6,name:'Tritium Breeding',field:'Nuclear',papers:1200,desc:'Producing tritium fuel inside the reactor blanket itself — essential for commercial fusion.'},
-    {id:7,name:'Energy Economics',field:'Economics',papers:9800,desc:'Economic analysis of energy systems, transition costs, and market dynamics.'},
-    {id:8,name:'Grid Integration',field:'Engineering',papers:7600,desc:'Connecting new power sources to the electrical grid at scale.'},
-    {id:9,name:'Neutron Shielding',field:'Nuclear',papers:3400,desc:'Protecting reactor components from high-energy neutron bombardment.'},
-    {id:10,name:'Inertial Confinement',field:'Physics',papers:2800,desc:'Using laser pulses to compress fuel pellets to fusion conditions.'},
-    {id:11,name:'High-Temp Ceramics',field:'Materials',papers:4100,desc:'Advanced ceramics that survive extreme reactor operating temperatures.'},
-    {id:12,name:'Quantum Sensing',field:'Quantum',papers:5600,gap:true,desc:'Using quantum entanglement for ultra-precise measurement. Could revolutionize plasma diagnostics. ZERO co-citations with fusion — a massive unexplored opportunity.'},
-    {id:13,name:'Biomimetic Materials',field:'Biology',papers:3200,gap:true,desc:'Materials inspired by biological self-repair mechanisms. Could enable self-healing reactor blankets. Only 2 adjacent papers exist.'},
-  ],
-  links:[[0,1],[0,3],[0,10],[1,3],[1,2],[2,5],[3,9],[4,1],[4,3],[5,11],[5,9],[6,9],[7,8],[7,0],[8,0],[11,2],[12,1],[13,6]],
-  gaps:[
-    {title:'Quantum Plasma Diagnostics',desc:'Quantum entanglement sensors could enable picosecond plasma measurements — 1,000,000× faster than current probes. Zero co-citations found across 200M papers.',count:0},
-    {title:'Biomimetic Self-Healing Blankets',desc:'Biological membrane repair mechanisms applied to tritium breeding blankets could extend operational lifetime 4–8×. Only 2 adjacent papers exist.',count:2},
-    {title:'Grid-AI Co-Design Protocol',desc:'No fusion paper cites AI-driven grid optimization. Co-designing the plant and its grid AI could cut commercial deployment time by 8 years.',count:0},
-  ],
-  hypotheses:[
-    {title:'Quantum Plasma Diagnostics',desc:'Quantum entanglement-based sensors achieve picosecond plasma state measurement, enabling real-time confinement corrections impossible with current probes.',extra:'Draws from quantum sensing in gravitational wave detection (LIGO). Both problems require measuring fast-changing quantum states with minimal perturbation — mathematically identical. Genesis found zero co-citations between these communities despite identical underlying physics.',tags:['Physics','Quantum','High Impact'],color:'blue'},
-    {title:'Self-Healing Tritium Blankets',desc:'Biologically-inspired self-repairing ceramics solve tritium containment degradation — applying cell membrane repair mechanisms to materials science.',extra:'Genesis found a structural isomorphism: equations governing lipid bilayer self-repair are mathematically analogous to crack propagation in ceramic composites. No researcher in either field has noticed this connection across 200M papers.',tags:['Materials','Biology','Novel'],color:'purple'},
-    {title:'Grid-AI Co-Design Framework',desc:'Fusion plants co-designed with grid management AI as a first-class subsystem could cut time-to-commercial by 8–12 years.',extra:'Energy economics research shows grid integration is historically the binding constraint on new power technology adoption — not the generation technology. Zero fusion papers cite this well-established literature. The most immediately actionable finding.',tags:['Engineering','Economics','Actionable'],color:'orange'},
-  ],
-  papers:{
-    0:['Roadmap to commercial fusion energy (Nature Energy, 2022) ×4,200','Progress in tokamak research toward Q>1 (Rev. Modern Physics, 2021) ×2,800'],
-    1:['Plasma turbulence in tokamaks (Annual Review Fluid Mechanics, 2022) ×3,100','MHD instabilities and confinement (Nuclear Fusion, 2021) ×2,200'],
-    12:['Quantum sensing below the standard quantum limit (Science, 2023) ×890','Entanglement-enhanced parameter estimation (Nature Physics, 2022) ×1,200'],
-    13:['Self-healing polymers inspired by biology (Advanced Materials, 2022) ×1,400','Membrane repair mechanisms in living cells (Cell, 2021) ×3,200'],
-  },
-  timeline:[
-    {year:'2030',desc:'First commercial fusion pilot online — limited to 500MW grids',color:'#58a6ff'},
-    {year:'2035',desc:'AI plasma control reduces instability events 94%. Quantum diagnostics enter testing.',color:'#bc8cff'},
-    {year:'2045',desc:'Fusion achieves cost parity with coal in 40 countries',color:'#3fb950'},
-    {year:'2055',desc:'Fusion-powered desalination solves water scarcity for 2B people',color:'#e3b341'},
-    {year:'2070',desc:'Earth\'s carbon emissions fall 80% — climate trajectory permanently reset',color:'#39d353'},
-  ],
-  feed:[
-    {time:'2h ago',text:'New preprint: "Superconducting magnet performance in ITER-scale reactors" — 847 related concepts found',tag:'Materials',tc:'var(--or)'},
-    {time:'6h ago',text:'Gap alert: Zero papers connect quantum error correction with plasma instability prediction',tag:'◆ Gap',tc:'var(--pu)'},
-    {time:'1d ago',text:'Hypothesis confirmed: AI optimization of magnetic field geometry reduces instability 31% (experiment)',tag:'✓ Validated',tc:'var(--gr)'},
-  ]
-};
-KB["Alzheimer's Disease"]={
-  nodes:[
-    {id:0,name:"Alzheimer's",field:'Medicine',papers:98000,core:true,desc:'Progressive neurodegenerative disorder. Leading cause of dementia, affecting 55M people worldwide.'},
-    {id:1,name:'Amyloid Plaques',field:'Neuroscience',papers:34000,desc:'Protein aggregates long considered the primary cause — but recent drug trial failures challenge the amyloid hypothesis.'},
-    {id:2,name:'Tau Protein',field:'Neuroscience',papers:21000,desc:'Neurofibrillary tangles correlate more strongly with cognitive decline than amyloid.'},
-    {id:3,name:'Neuroinflammation',field:'Immunology',papers:18000,desc:'Chronic brain inflammation increasingly seen as a driver, not merely a symptom, of neurodegeneration.'},
-    {id:4,name:'Gut-Brain Axis',field:'Microbiology',papers:8700,gap:true,desc:'Bidirectional gut microbiome-brain communication. Changes appear 15 years before Alzheimer\'s symptoms — a prevention window.'},
-    {id:5,name:'CRISPR',field:'Genetics',papers:41000,desc:'Gene editing tool that could correct Alzheimer\'s-linked genetic variants or reset epigenetic aging signatures.'},
-    {id:6,name:'Blood-Brain Barrier',field:'Neuroscience',papers:14000,desc:'Selective barrier blocking most drugs from reaching the brain — the key drug delivery bottleneck.'},
-    {id:7,name:'Sleep Disruption',field:'Neuroscience',papers:9200,desc:'Sleep problems precede Alzheimer\'s by years. The glymphatic system clears amyloid only during deep slow-wave sleep.'},
-    {id:8,name:'AI Drug Discovery',field:'AI',papers:22000,desc:'Machine learning for identifying drug candidates from vast molecular and genomic datasets.'},
-    {id:9,name:'Mitochondria',field:'Cell Biology',papers:7800,desc:'Cellular powerhouses showing early dysfunction in Alzheimer\'s — may be upstream of the amyloid cascade.'},
-    {id:10,name:'Lipid Metabolism',field:'Biochemistry',papers:5400,gap:true,desc:'Fat processing in neurons. Emerging evidence links lipid dysregulation to tau propagation. Zero mechanistic studies exist.'},
-    {id:11,name:'Circadian Rhythms',field:'Biology',papers:6300,desc:'24-hour biological clock. Disruption accelerates neurodegeneration via multiple independent pathways.'},
-  ],
-  links:[[0,1],[0,2],[0,3],[1,2],[1,6],[3,4],[3,9],[4,7],[5,1],[5,2],[6,8],[7,11],[8,0],[9,10],[10,3],[11,7]],
-  gaps:[
-    {title:'Microbiome Early Warning System',desc:'Gut microbiota changes measurably 15 years before Alzheimer\'s symptoms. Only 12 longitudinal studies exist. Prevention possible decades earlier.',count:12},
-    {title:'Acoustic Sleep-Phase Therapy',desc:'No Phase II trial for acoustic slow-wave sleep stimulation as amyloid clearance therapy, despite the glymphatic mechanism being well established.',count:0},
-    {title:'Mitochondrial Lipid Crosstalk',desc:'Zero mechanistic studies of how mitochondrial dysfunction alters lipid metabolism to accelerate tau propagation — strong biological plausibility, zero papers.',count:0},
-  ],
-  hypotheses:[
-    {title:'Microbiome-First Prevention',desc:'Gut microbiota composition changes 15 years before Alzheimer\'s symptoms. A microbiome signature test enables preventive intervention decades earlier than current diagnostics.',extra:'Genesis found 3 specific bacterial genera (Bacteroides, Faecalibacterium, Akkermansia) showing consistent patterns preceding cognitive decline by 12-18 years. No clinical trial has tested microbiome-targeted prevention.',tags:['Microbiology','Prevention','Disruptive'],color:'blue'},
-    {title:'Sleep-Phase Plaque Clearance',desc:'The glymphatic system clears amyloid only during slow-wave sleep. Targeted 40Hz acoustic stimulation could dramatically increase clearance rates without any drug.',extra:'Genesis combines sleep science, acoustics, and neuroscience in a way no current research group is pursuing systematically. 40Hz auditory entrainment already shown to modulate gamma oscillations in Alzheimer\'s mice.',tags:['Neuroscience','Non-invasive','Testable'],color:'purple'},
-    {title:'Epigenetic CRISPR Reset',desc:'Epigenetic CRISPR tools could restore youthful gene expression patterns in aging neurons — reversing rather than merely slowing neurodegeneration.',extra:'The epigenetic aging signature of neurons follows a specific pattern CRISPR-dCas9 activators could theoretically reverse. No DNA change required. No lab is currently pursuing this angle for Alzheimer\'s.',tags:['Genetics','Radical','10yr Horizon'],color:'orange'},
-  ],
-  papers:{
-    0:['Amyloid hypothesis revisited after failed trials (Nature Reviews, 2022) ×8,200','Lessons from Alzheimer\'s clinical trials (Lancet, 2023) ×4,100'],
-    4:['Gut microbiome alterations in Alzheimer\'s disease (Nature Neuroscience, 2022) ×1,800'],
-    7:['Glymphatic system clearance during sleep (Cell, 2021) ×5,600','Sleep and Alzheimer\'s: bidirectional relationship (PNAS, 2022) ×2,100'],
-  },
-  timeline:[
-    {year:'2028',desc:'Microbiome screening identifies at-risk patients 15 years early',color:'#58a6ff'},
-    {year:'2033',desc:'Acoustic sleep therapy reduces onset rate by 30% in trials',color:'#bc8cff'},
-    {year:'2040',desc:'Epigenetic CRISPR halts neurodegeneration in 65% of trial patients',color:'#3fb950'},
-    {year:'2050',desc:'Alzheimer\'s becomes a manageable chronic condition, not a death sentence',color:'#e3b341'},
-    {year:'2065',desc:'Dementia rates fall 90% — 50M people live full cognitive lives',color:'#39d353'},
-  ],
-  feed:[
-    {time:'3h ago',text:'Gap confirmed: Zero papers connect acoustic neurostimulation with glymphatic clearance rate optimization',tag:'◆ Gap',tc:'var(--pu)'},
-    {time:'8h ago',text:'New preprint validates microbiome-Alzheimer\'s link in 12,000-person cohort study',tag:'Hot',tc:'var(--re)'},
-    {time:'2d ago',text:'CRISPR epigenetic reset shows promise in mouse models — 3 labs now investigating',tag:'Progress',tc:'var(--gr)'},
-  ]
-};
-KB['Quantum Computing']={
-  nodes:[
-    {id:0,name:'Quantum Computing',field:'Physics',papers:78000,core:true,desc:'Computing using quantum mechanical phenomena — superposition and entanglement — to perform calculations impossible for classical computers.'},
-    {id:1,name:'Qubit Coherence',field:'Physics',papers:22000,desc:'Maintaining quantum states long enough to complete useful computation. The fundamental engineering challenge.'},
-    {id:2,name:'Error Correction',field:'Mathematics',papers:14000,desc:'Protecting quantum information from decoherence. Requires ~1000 physical qubits per logical qubit.'},
-    {id:3,name:'Topological Qubits',field:'Physics',papers:6700,desc:'Topology-protected qubits — theoretically more stable and potentially needing far less error correction overhead.'},
-    {id:4,name:'Quantum Cryptography',field:'Computer Science',papers:19000,desc:'Cryptographic protocols based on quantum mechanics — unbreakable by physics, not just computational difficulty.'},
-    {id:5,name:'Drug Simulation',field:'Chemistry',papers:8200,desc:'Quantum simulation of molecular interactions — could revolutionize drug discovery with true quantum accuracy.'},
-    {id:6,name:'AI Acceleration',field:'AI',papers:4100,gap:true,desc:'Using quantum circuits to accelerate machine learning. Could reduce AI compute costs 99%. No working prototype architecture exists.'},
-    {id:7,name:'Materials Discovery',field:'Materials',papers:11000,desc:'Discovering new materials by quantum simulation of atomic-scale interactions.'},
-    {id:8,name:'Climate Modeling',field:'Earth Science',papers:3200,gap:true,desc:'Quantum simulation of atmospheric chemistry at molecular resolution. No feasibility study exists despite enormous potential.'},
-    {id:9,name:'Supply Chain Opt.',field:'Economics',papers:5600,desc:'Quantum optimization applied to logistics — could save trillions in global supply chain inefficiency.'},
-    {id:10,name:'Quantum Biology',field:'Biology',papers:2100,gap:true,desc:'FMO proteins maintain quantum coherence at 37°C for milliseconds — 1000× longer than engineered qubits at near absolute zero. Completely uninvestigated for qubit design.'},
-  ],
-  links:[[0,1],[0,2],[0,3],[1,2],[2,3],[4,0],[5,0],[5,7],[6,0],[7,0],[8,0],[9,0],[10,0],[6,10]],
-  gaps:[
-    {title:'Quantum-Classical Hybrid LLMs',desc:'Transformer attention is O(n²) classically but O(n log n) with quantum Fourier transforms. No hybrid architecture exists despite both fields being mature.',count:0},
-    {title:'Bio-Quantum Qubit Design',desc:'FMO proteins maintain quantum coherence at body temperature 1000× longer than engineered qubits near absolute zero. No lab is applying this to qubit design.',count:3},
-    {title:'Quantum Climate Twin',desc:'A quantum simulation of Earth\'s climate at molecular resolution would eliminate the 30% parameterization uncertainty in current IPCC models.',count:0},
-  ],
-  hypotheses:[
-    {title:'Quantum-Classical Hybrid LLMs',desc:'Transformer attention is O(n²) classically but O(n log n) with quantum Fourier transforms. Hybrid inference could reduce AI compute costs by 99% by 2035.',extra:'Genesis found zero cross-citations between the quantum speedup literature and transformer efficiency literature, despite the core mathematical operation being identical — matrix multiplication. The structural isomorphism has been completely missed by both communities.',tags:['AI','Quantum','Transformative'],color:'blue'},
-    {title:'Biological Quantum Blueprints',desc:'FMO complexes in avian navigation proteins maintain quantum coherence at body temperature — 1000× longer than engineered qubits near absolute zero.',extra:'Quantum biology and qubit coherence literature share zero citations. The physical mechanism is the same — quantum coherence in warm, noisy environments — but the communities have never spoken. This is the most shocking citation gap Genesis has found.',tags:['Biology','Materials','Radical'],color:'purple'},
-    {title:'Quantum Climate Twin',desc:'A 1000-qubit quantum simulation of Earth\'s climate at molecular resolution eliminates the parameterization errors causing 30% uncertainty in IPCC models.',extra:'No climate scientist and no quantum computer scientist have ever co-authored a paper. Genesis found this by cross-indexing the two fields — the intersection is completely empty.',tags:['Earth Science','Policy','High Impact'],color:'orange'},
-  ],
-  papers:{
-    0:['Quantum supremacy using a superconducting processor (Nature, 2019) ×8,900','Fault-tolerant quantum computing (Science, 2023) ×2,200'],
-    6:['Quantum machine learning (Nature, 2017) ×6,800','Variational quantum eigensolver (PRX Quantum, 2022) ×1,100'],
-    10:['Quantum coherence in photosynthesis (Nature Chemistry, 2021) ×3,400','Quantum entanglement in avian navigation (PNAS, 2022) ×1,800'],
-  },
-  timeline:[
-    {year:'2027',desc:'1000-qubit fault-tolerant processor solves first real chemistry problem',color:'#58a6ff'},
-    {year:'2032',desc:'Quantum drug discovery cuts clinical trial timelines from 10yr to 2yr',color:'#bc8cff'},
-    {year:'2038',desc:'Quantum-AI hybrid reduces global AI energy consumption by 80%',color:'#3fb950'},
-    {year:'2048',desc:'Quantum climate models enable precise 50-year regional forecasting',color:'#e3b341'},
-    {year:'2060',desc:'Post-quantum cryptography secures all global digital infrastructure',color:'#39d353'},
-  ],
-  feed:[
-    {time:'1h ago',text:'Microsoft claims topological qubit breakthrough — 47 groups attempting replication',tag:'Breaking',tc:'var(--re)'},
-    {time:'5h ago',text:'Gap alert: Quantum simulation of protein folding still 10× less accurate than AlphaFold',tag:'◆ Gap',tc:'var(--pu)'},
-    {time:'1d ago',text:'New quantum algorithm achieves exponential speedup on practical optimization problems',tag:'Progress',tc:'var(--gr)'},
-  ]
-};
-
-function defData(q){
-  return{nodes:[
-    {id:0,name:q,field:'Research',papers:Math.floor(Math.random()*40000+8000),core:true,desc:'Frontier research topic: '+q},
-    {id:1,name:'Machine Learning',field:'AI',papers:145000,desc:'Statistical learning from data at scale.'},
-    {id:2,name:'Systems Biology',field:'Biology',papers:34000,desc:'Systems-level understanding of biological networks.'},
-    {id:3,name:'Complexity Theory',field:'Mathematics',papers:12000,desc:'Mathematical study of complex adaptive systems.'},
-    {id:4,name:'Nanotechnology',field:'Materials',papers:67000,desc:'Engineering at the nanometer scale.'},
-    {id:5,name:'Synthetic Biology',field:'Biology',papers:23000,gap:true,desc:'Dramatically understudied in relation to '+q+'.'},
-    {id:6,name:'Information Theory',field:'Mathematics',papers:18000,desc:'Mathematical theory of communication.'},
-    {id:7,name:'Network Science',field:'Physics',papers:9400,desc:'Study of complex network structures.'},
-    {id:8,name:'Game Theory',field:'Economics',papers:15000,gap:true,desc:'No application to '+q+' exists in literature.'},
-  ],links:[[0,1],[0,2],[0,3],[1,4],[2,5],[3,6],[4,5],[5,8],[6,7],[7,0],[8,0],[1,6]],
-  gaps:[{title:q+' × Synthetic Biology',desc:'Emerging intersection — could unlock entirely new approaches.',count:4},{title:'Game-Theoretic Adoption Models',desc:'No comprehensive game-theoretic model of '+q+' adoption exists.',count:0},{title:'Information-Theoretic Bounds',desc:'Efficiency bounds for '+q+' remain an open mathematical problem.',count:2}],
-  hypotheses:[{title:'AI-Augmented Research',desc:'LLMs trained on domain-specific corpora could identify connections in '+q+' literature at 10,000× human speed.',extra:'Genesis identified 847 papers across 6 disciplines sharing mathematical structures, yet never co-cited.',tags:['AI','Research','Near-term'],color:'blue'},{title:'Cross-disciplinary Synthesis',desc:'The fundamental equations governing '+q+' may be isomorphic to unsolved problems in network science.',extra:'This structural isomorphism pattern historically precedes major breakthroughs — Maxwell, Schrödinger, Shannon.',tags:['Mathematics','Novel','Speculative'],color:'purple'},{title:'Open Coordination Protocol',desc:'Decentralized research coordination could accelerate '+q+' progress by removing incentive barriers.',extra:'40% of redundant experiments could be eliminated with better coordination mechanisms.',tags:['Policy','Systems','Actionable'],color:'orange'}],
-  papers:{0:['Frontiers in '+q+': a systematic review (Nature Reviews, 2023) ×2,400']},
-  timeline:[{year:'2028',desc:'First AI-generated hypothesis in '+q+' validated',color:'#58a6ff'},{year:'2033',desc:'Cross-disciplinary synthesis produces breakthrough',color:'#bc8cff'},{year:'2040',desc:'Open-source protocols quadruple global output',color:'#3fb950'},{year:'2050',desc:'Civilization-scale applications viable',color:'#e3b341'},{year:'2070',desc:'Technology becomes foundational infrastructure',color:'#39d353'}],
-  feed:[{time:'Just now',text:'Genesis detected 23 new knowledge gaps in '+q,tag:'◆ New Gaps',tc:'var(--pu)'},{time:'2h ago',text:'Cross-disciplinary collaboration in '+q+' up 18% this year',tag:'Trend',tc:'var(--ac)'}]};
+// SEMANTIC SCHOLAR — public API, no key, full CORS in browsers
+var SS='https://api.semanticscholar.org/graph/v1';
+var SSF='title,authors,year,citationCount,abstract,externalIds,openAccessPdf,venue';
+async function ssFetch(query,limit){
+  var r=await fetch(SS+'/paper/search?query='+encodeURIComponent(query)+'&fields='+SSF+'&limit='+(limit||6));
+  if(!r.ok)throw new Error('Semantic Scholar '+r.status);
+  var d=await r.json();return d.data||[];
 }
+function paperUrl(p){if(p.openAccessPdf&&p.openAccessPdf.url)return p.openAccessPdf.url;if(p.externalIds){if(p.externalIds.DOI)return'https://doi.org/'+p.externalIds.DOI;if(p.externalIds.ArXiv)return'https://arxiv.org/abs/'+p.externalIds.ArXiv;}return'https://www.semanticscholar.org/paper/'+p.paperId;}
+function authorStr(p){if(!p.authors||!p.authors.length)return'Unknown';var a=p.authors.slice(0,3).map(function(x){return x.name;});if(p.authors.length>3)a.push('et al.');return a.join(', ');}
 
-// ── STATE ──
-var D=null, Q='', SZ=null, SL=true, GH=false, AF=null, ANIM=false, SELNODE=null, LIGHTMODE=false;
-
-// ── LOADING ──
-var STEPS=['Scanning 200M+ research papers…','Embedding concepts into semantic space…','Building knowledge graph…','Detecting unexplored intersections…','Generating novel hypotheses…','Simulating civilization impact…'];
-function showLoad(){
-  var el=document.getElementById('loading');el.style.display='flex';
-  var c=document.getElementById('lstps');c.innerHTML='';
-  for(var i=0;i<STEPS.length;i++){var d=document.createElement('div');d.className='lstp';d.id='ls'+i;d.innerHTML='<div class="sd"></div>'+STEPS[i];c.appendChild(d);}
-  var i=0;var iv=setInterval(function(){
-    if(i>0){var p=document.getElementById('ls'+(i-1));if(p){p.classList.remove('on');p.classList.add('done');}}
-    var cur=document.getElementById('ls'+i);if(cur)cur.classList.add('on');
-    i++;if(i>=STEPS.length)clearInterval(iv);
-  },500);
-  return iv;
-}
+// LOADING
+var STEPS=['Querying Semantic Scholar for real papers…','Analyzing cross-field connections…','Building knowledge graph…','Running gap detection algorithm…','Generating AI hypotheses…','Modeling civilization trajectories…'];
+function showLoad(){var el=document.getElementById('loading');el.style.display='flex';var c=document.getElementById('lstps');c.innerHTML='';STEPS.forEach(function(s,i){var d=document.createElement('div');d.className='lstp';d.id='ls'+i;d.innerHTML='<div class="sd"></div>'+s;c.appendChild(d);});var i=0;var iv=setInterval(function(){if(i>0){var p=document.getElementById('ls'+(i-1));if(p){p.classList.remove('on');p.classList.add('done');}}var cur=document.getElementById('ls'+i);if(cur)cur.classList.add('on');i++;if(i>=STEPS.length)clearInterval(iv);},520);return iv;}
 function hideLoad(){document.getElementById('loading').style.display='none';}
 
-// ── NOTIFICATIONS ──
-var NT=null;
-function sn(msg,col){
-  var el=document.getElementById('notif');el.textContent=msg;
-  el.style.borderColor=col||'rgba(255,255,255,0.14)';
-  el.classList.add('on');
-  if(NT)clearTimeout(NT);
-  NT=setTimeout(function(){el.classList.remove('on');},2800);
-}
-
-// ── SEARCH ──
 function qs(q){document.getElementById('hi').value=q;go();}
 function runMini(){var q=document.getElementById('msin').value.trim();if(q){document.getElementById('hi').value=q;go();}}
+
 function go(){
-  var q=(document.getElementById('hi').value||'').trim()||'Fusion Energy';
+  var q=(document.getElementById('hi').value||'').trim();
+  if(!q){sn('Please enter a topic');return;}
   var iv=showLoad();
-  setTimeout(function(){
+  Promise.all([callGenesisAI(q),ssFetch(q,8)]).then(function(res){
     clearInterval(iv);hideLoad();
-    var d=null;
-    var keys=Object.keys(KB);
-    for(var i=0;i<keys.length;i++){
-      var k=keys[i];
-      if(q.toLowerCase().indexOf(k.toLowerCase().replace("'s",''))>=0||k.toLowerCase().indexOf(q.toLowerCase())>=0){d=KB[k];break;}
-    }
-    if(!d)d=defData(q);
-    D=d;Q=q;SELNODE=null;
+    var gd=res[0],rp=res[1];
+    // Attach real Semantic Scholar papers to core node and distribute
+    if(!gd.papers)gd.papers={};
+    gd.papers['0']=rp.slice(0,4);
+    rp.slice(4).forEach(function(p,i){var k=String((i%(gd.nodes.length-1))+1);if(!gd.papers[k])gd.papers[k]=[];gd.papers[k].push(p);});
+    gd._realPapers=rp;
+    D=gd;Q=q;
     document.getElementById('hero').style.display='none';
     document.getElementById('app').classList.add('on');
     document.getElementById('hnav').style.display='flex';
     document.getElementById('msw').style.display='flex';
     document.getElementById('msin').value='';
-    buildSB(q,d);buildGraph(d);buildRP(d);
-    sn('Graph built — '+d.nodes.length+' concepts, '+d.gaps.length+' gaps found','rgba(63,185,80,.5)');
-  },3200);
-}
-function goHome(){
-  document.getElementById('hero').style.display='flex';
-  document.getElementById('app').classList.remove('on');
-  D=null;Q='';SELNODE=null;
+    buildSB(q,gd);buildGraph(gd);buildRP(gd);
+    sn('Graph built — '+gd.nodes.length+' concepts, '+rp.length+' real papers loaded','rgba(63,185,80,.5)');
+  }).catch(function(e){clearInterval(iv);hideLoad();sn('Error: '+e.message,'rgba(255,123,114,.5)');console.error(e);});
 }
 
-// ── BUILD SIDEBAR ──
+function goHome(){document.getElementById('hero').style.display='flex';document.getElementById('app').classList.remove('on');D=null;Q='';}
+
+async function callGenesisAI(query){
+  var prompt='Generate a knowledge graph for: "'+query+'"\nReturn ONLY valid JSON, no markdown:\n{"nodes":[{"id":0,"name":"'+query+'","field":"Physics","papers":50000,"core":true,"desc":"Brief description"},{"id":1,"name":"Related","field":"Engineering","papers":12000,"desc":"Desc"},{"id":2,"name":"Unexplored Gap","field":"Biology","papers":3000,"gap":true,"desc":"Why gap"}],"links":[[0,1],[0,2]],"gaps":[{"title":"Gap","desc":"Specific gap with real fields","count":0}],"hypotheses":[{"title":"H","desc":"Specific testable hypothesis","extra":"Scientific rationale","tags":["Field1","Field2"],"color":"blue"},{"title":"H2","desc":"...","extra":"...","tags":[],"color":"purple"},{"title":"H3","desc":"...","extra":"...","tags":[],"color":"orange"}],"timeline":[{"year":"2028","desc":"Milestone","color":"#58a6ff"},{"year":"2033","desc":"Milestone","color":"#bc8cff"},{"year":"2040","desc":"Milestone","color":"#3fb950"},{"year":"2050","desc":"Milestone","color":"#e3b341"},{"year":"2065","desc":"Milestone","color":"#39d353"}],"feed":[{"time":"2h ago","text":"Recent development","tag":"Update","tc":"var(--ac)"},{"time":"1d ago","text":"Gap detected","tag":"◆ Gap","tc":"var(--pu)"}]}\nRules: 10-14 nodes, 2-4 gap:true, real field names, realistic paper counts, specific hypotheses, mention real scientists in "extra".';
+  var r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:3000,messages:[{role:'user',content:prompt}]})});
+  if(!r.ok){var e=await r.json();throw new Error(e.error&&e.error.message||'API '+r.status);}
+  var data=await r.json();var txt=data.content[0].text.trim().replace(/^```json\s*/,'').replace(/^```\s*/,'').replace(/\s*```$/,'');
+  try{return JSON.parse(txt);}catch(e){var m=txt.match(/\{[\s\S]*\}/);if(m)return JSON.parse(m[0]);throw new Error('Could not parse AI response');}
+}
+
 function buildSB(q,d){
   document.getElementById('sbq').textContent=q;
   document.getElementById('stn').textContent=d.nodes.length;
   document.getElementById('ste').textContent=d.links.length;
   var fs=[];d.nodes.forEach(function(n){if(fs.indexOf(n.field)<0)fs.push(n.field);});
   document.getElementById('stf').textContent=fs.length;
-  document.getElementById('stg').textContent=d.gaps.length;
-  document.getElementById('gcnt').textContent=d.gaps.length+' detected';
-
-  // Field pills
-  var hp='';
-  for(var i=0;i<fs.length;i++){
-    hp+='<div class="fpill" data-field="'+fs[i]+'" onclick="filterF(this)"><div class="fdot" style="background:'+fc(fs[i])+'"></div>'+fs[i]+'</div>';
-  }
+  var gc=d.nodes.filter(function(n){return n.gap;}).length;
+  document.getElementById('stg').textContent=gc;
+  document.getElementById('gcnt').textContent=gc+' detected';
+  var hp='';fs.forEach(function(f){hp+='<div class="fpill" data-field="'+esc(f)+'" onclick="filterF(this)"><div class="fdot" style="background:'+fc(f)+'"></div>'+esc(f)+'</div>';});
   document.getElementById('fpills').innerHTML=hp;
-
-  // Gap cards
-  var gc='';
-  for(var i=0;i<d.gaps.length;i++){
-    gc+='<div class="gapc" data-gidx="'+i+'"><div class="gct">'+d.gaps[i].title+'</div><div class="gcd">'+d.gaps[i].desc+'</div><div class="gcb">◆ '+d.gaps[i].count+' co-citations</div></div>';
-  }
-  var gcEl=document.getElementById('gcards');
-  gcEl.innerHTML=gc;
-  gcEl.querySelectorAll('.gapc').forEach(function(card){
-    card.addEventListener('click',function(){
-      var idx=parseInt(card.getAttribute('data-gidx'));
-      selGap(idx);
-    });
-  });
-
-  // Hypothesis cards
-  var hh='';
-  for(var i=0;i<d.hypotheses.length;i++){
-    var h=d.hypotheses[i];
-    var col=h.color==='blue'?'var(--ac)':h.color==='purple'?'var(--pu)':'var(--or)';
-    var tc=h.color==='blue'?'htb':h.color==='purple'?'htp':'hto';
-    var tags='';for(var t=0;t<h.tags.length;t++)tags+='<span class="htg '+tc+'">'+h.tags[t]+'</span>';
-    hh+='<div class="hcard" id="hcard'+i+'" data-hidx="'+i+'"><div class="hbr" style="background:'+col+'"></div><div class="htitle">'+h.title+'</div><div class="hdesc">'+h.desc+'</div><div class="htgs">'+tags+'</div><div class="hexp">'+h.extra+'</div></div>';
-  }
-  var hcEl=document.getElementById('hcards');
-  hcEl.innerHTML=hh;
-  hcEl.querySelectorAll('.hcard').forEach(function(card){
-    card.addEventListener('click',function(){
-      var idx=parseInt(card.getAttribute('data-hidx'));
-      togH(idx);
-    });
-  });
-
-  // Timeline
+  var gci=document.getElementById('gcards'),gch='';
+  (d.gaps||[]).forEach(function(g,i){gch+='<div class="gapc" data-gidx="'+i+'"><div class="gct">'+esc(g.title)+'</div><div class="gcd">'+esc(g.desc)+'</div><div class="gcb">◆ '+g.count+' co-citations</div></div>';});
+  gci.innerHTML=gch;
+  gci.querySelectorAll('.gapc').forEach(function(c){c.addEventListener('click',function(){selGap(parseInt(c.getAttribute('data-gidx')));});});
+  var hci=document.getElementById('hcards'),hh='';
+  (d.hypotheses||[]).forEach(function(h,i){var col=h.color==='blue'?'var(--ac)':h.color==='purple'?'var(--pu)':'var(--or)';var tc=h.color==='blue'?'htb':h.color==='purple'?'htp':'hto';var tags='';(h.tags||[]).forEach(function(t){tags+='<span class="htg '+tc+'">'+esc(t)+'</span>';});hh+='<div class="hcard" id="hcard'+i+'" data-hidx="'+i+'"><div class="hbr" style="background:'+col+'"></div><div class="htitle">'+esc(h.title)+'</div><div class="hdesc">'+esc(h.desc)+'</div><div class="htgs">'+tags+'</div><div class="hexp">'+esc(h.extra||'')+'</div></div>';});
+  hci.innerHTML=hh;
+  hci.querySelectorAll('.hcard').forEach(function(c){c.addEventListener('click',function(){togH(parseInt(c.getAttribute('data-hidx')));});});
   document.getElementById('simst').textContent='If "'+q+'" research succeeds…';
-  var tl='';
-  for(var i=0;i<d.timeline.length;i++){
-    var t=d.timeline[i];
-    tl+='<div class="tli"><div class="tldot" style="background:'+t.color+';border-color:var(--bg2)"></div><div class="tliyr" style="color:'+t.color+'">'+t.year+'</div><div class="tlidesc">'+t.desc+'</div></div>';
-  }
+  var tl='';(d.timeline||[]).forEach(function(t){tl+='<div class="tli"><div class="tldot" style="background:'+t.color+';border-color:var(--bg2)"></div><div class="tliyr" style="color:'+t.color+'">'+esc(t.year)+'</div><div class="tlidesc">'+esc(t.desc)+'</div></div>';});
   document.getElementById('tlbox').innerHTML=tl;
-
-  // Feed
-  var fd='';
-  var feed=d.feed||[];
-  for(var i=0;i<feed.length;i++){
-    var f=feed[i];
-    fd+='<div class="fdi"><div class="fdt">'+f.time+'</div><div class="fdtx">'+f.text+'</div><span class="fdtg" style="color:'+f.tc+'">'+f.tag+'</span></div>';
-  }
-  var feedEl=document.getElementById('feed');
+  var feedEl=document.getElementById('feed'),fd='';var feed=d.feed||[];
+  feed.forEach(function(f,i){fd+='<div class="fdi" data-fi="'+i+'"><div class="fdt">'+esc(f.time)+'</div><div class="fdtx">'+esc(f.text)+'</div><span class="fdtg" style="color:'+f.tc+'">'+esc(f.tag)+'</span></div>';});
   feedEl.innerHTML=fd;
-  feedEl.querySelectorAll('.fdi').forEach(function(item,i){
-    item.addEventListener('click',function(){
-      var f=feed[i];if(f)sn(f.tag+': '+f.text.substring(0,60)+'…');
-    });
-  });
-
+  feedEl.querySelectorAll('.fdi').forEach(function(el){el.addEventListener('click',function(){var f=feed[parseInt(el.getAttribute('data-fi'))];if(f)sn(f.tag+': '+f.text.substring(0,65)+'…');});});
   buildProgress(d);
 }
+function togH(i){var el=document.getElementById('hcard'+i);if(el)el.classList.toggle('open');}
+function filterF(el){var f=el.getAttribute('data-field');document.querySelectorAll('.fpill').forEach(function(p){p.classList.remove('on');});if(AF===f){AF=null;buildGraph(D);}else{AF=f;el.classList.add('on');buildGraph(D,f);}}
+function selGap(i){if(!D)return;var gn=D.nodes.filter(function(n){return n.gap;});if(gn[i])selNode(gn[i]);if((D.gaps||[])[i])sn('Gap: '+D.gaps[i].title,'rgba(188,140,255,.5)');}
+function buildProgress(d){var s=d.nodes.slice().sort(function(a,b){return(b.papers||0)-(a.papers||0);}).slice(0,6);var mx=s[0]?s[0].papers||1:1;var h='';s.forEach(function(n){var p=Math.round((n.papers||0)/mx*100);h+='<div class="progrow"><div class="proglbl"><span>'+esc(n.name.substring(0,18))+'</span><span>'+((n.papers||0)).toLocaleString()+'</span></div><div class="progbar"><div class="progfill" style="width:'+p+'%;background:'+(n.gap?'var(--pu)':fc(n.field))+'"></div></div></div>';});document.getElementById('progbars').innerHTML=h;}
 
-function togH(i){
-  var el=document.getElementById('hcard'+i);
-  el.classList.toggle('open');
-}
-
-function filterF(el){
-  var f=el.getAttribute('data-field');
-  var pills=document.querySelectorAll('.fpill');
-  pills.forEach(function(p){p.classList.remove('on');});
-  if(AF===f){AF=null;buildGraph(D);}
-  else{AF=f;el.classList.add('on');buildGraph(D,f);}
-}
-
-function selGap(i){
-  var gn=D.nodes.filter(function(n){return n.gap;});
-  if(gn[i])selNode(gn[i]);
-  sn('Highlighting gap: '+D.gaps[i].title,'rgba(188,140,255,.5)');
-}
-
-function buildProgress(d){
-  var sorted=d.nodes.slice().sort(function(a,b){return(b.papers||0)-(a.papers||0);}).slice(0,6);
-  var maxP=sorted[0]?sorted[0].papers||1:1;
-  var html='';
-  for(var i=0;i<sorted.length;i++){
-    var n=sorted[i];
-    var pct=Math.round((n.papers||0)/maxP*100);
-    html+='<div class="progrow"><div class="proglbl"><span>'+n.name+'</span><span>'+((n.papers||0)).toLocaleString()+'</span></div><div class="progbar"><div class="progfill" style="width:'+pct+'%;background:'+(n.gap?'var(--pu)':fc(n.field))+'">&nbsp;</div></div></div>';
-  }
-  document.getElementById('progbars').innerHTML=html;
-}
-
-// ── BUILD RIGHT PANEL ──
 function buildRP(d){
-  var html='';
-  for(var i=0;i<d.nodes.length;i++){
-    var n=d.nodes[i];
-    html+='<div class="ritem" data-nid="'+n.id+'" style="cursor:pointer"><div class="rdot" style="background:'+(n.gap?'var(--pu)':fc(n.field))+'"></div><div><div class="rname">'+n.name+(n.gap?' ◆':'')+'</div><div class="rfield">'+n.field+' · '+((n.papers||0)).toLocaleString()+' papers</div></div></div>';
-  }
-  var el=document.getElementById('rlist');
-  el.innerHTML=html;
-  el.querySelectorAll('.ritem').forEach(function(item){
-    item.addEventListener('click',function(){
-      var nid=parseInt(item.getAttribute('data-nid'));
-      var node=D.nodes.find(function(n){return n.id===nid;});
-      if(node)selNode(node);
-    });
-  });
+  var h='';d.nodes.forEach(function(n){h+='<div class="ritem" data-nid="'+n.id+'"><div class="rdot" style="background:'+(n.gap?'var(--pu)':fc(n.field))+'"></div><div><div class="rname">'+esc(n.name)+(n.gap?' ◆':'')+'</div><div class="rfield">'+esc(n.field)+' · '+((n.papers||0)).toLocaleString()+' papers</div></div></div>';});
+  var el=document.getElementById('rlist');el.innerHTML=h;
+  el.querySelectorAll('.ritem').forEach(function(item){item.addEventListener('click',function(){var nid=parseInt(item.getAttribute('data-nid'));var node=D.nodes.find(function(n){return n.id===nid;});if(node)selNode(node);});});
 }
 
-function selNodeStr(s){
-  try{selNode(JSON.parse(s));}catch(e){sn('Error loading node');}
-}
-
+// SELECT NODE — fetches REAL papers from Semantic Scholar
 function selNode(n){
-  SELNODE=n;
   d3.selectAll('.nc').attr('opacity',function(d){return d.id===n.id?1:0.2;});
   setTimeout(function(){d3.selectAll('.nc').attr('opacity',1);},2200);
-
-  var conns=0;
-  if(D&&D.links){D.links.forEach(function(l){if(l[0]===n.id||l[1]===n.id)conns++;});}
-
-  var html='<div class="ndet"><div class="ndname" style="color:'+(n.gap?'var(--pu)':fc(n.field))+'">'+n.name+(n.gap?' ◆ Gap':n.core?' ★ Core':'')+'</div>';
-  html+='<div class="ndfield">'+n.field+'</div>';
-  html+='<div class="ndsgrid"><div class="ndstat"><div class="ndstval" style="color:'+fc(n.field)+'">'+(n.papers||0).toLocaleString()+'</div><div class="ndstlbl">Papers</div></div>';
-  html+='<div class="ndstat"><div class="ndstval" style="color:var(--pu)">'+conns+'</div><div class="ndstlbl">Links</div></div></div>';
-  html+='<div class="ndbody">'+(n.desc||'')+'</div>';
-  html+='<div class="ndbtns">';
-  html+='<button class="ndbtn pr" id="nd-ai">🤖 Ask AI</button>';
-  html+='<button class="ndbtn" id="nd-papers">📚 Papers</button>';
-  html+='<button class="ndbtn" id="nd-expand">+ Expand</button>';
-  html+='</div></div>';
-  document.getElementById('ninsp').innerHTML=html;
-  // Wire buttons via event listeners — safe for any node name
-  var bAI=document.getElementById('nd-ai');
-  if(bAI)bAI.addEventListener('click',function(){openAI(n.name);});
-  var bP=document.getElementById('nd-papers');
-  if(bP)bP.addEventListener('click',function(){showPapersModal(n);});
-  var bE=document.getElementById('nd-expand');
-  if(bE)bE.addEventListener('click',function(){expandNode(n);});
-
-  var papers=(D&&D.papers&&D.papers[n.id])||[];
-  var ph='';
-  if(papers.length){
-    for(var i=0;i<papers.length;i++){
-      var p=papers[i];var pt=p.split(' ×');
-      ph+='<div class="pcard" data-pidx="'+i+'"><div class="ptit">'+pt[0]+'</div><div class="pmeta"><span>Cited by</span><span class="pcite">'+((pt[1]||'—'))+' papers</span></div></div>';
-    }
-  } else {
-    ph='<div style="font-size:10px;color:var(--tx3);padding:4px 0">No indexed papers for this node.<br><br><button id="arxiv-fetch-btn" style="padding:4px 10px;background:var(--bg3);border:1px solid var(--b2);color:var(--tx2);border-radius:5px;cursor:pointer;font-size:10px;font-family:Inter,sans-serif;margin-top:4px">Fetch from ArXiv ↗</button></div>';
-  }
-  var ppEl=document.getElementById('ppan');
-  ppEl.innerHTML=ph;
-  ppEl.querySelectorAll('.pcard').forEach(function(card,ci){
-    card.addEventListener('click',function(){
-      sn('Opening paper '+((ci+1))+' in browser…');
-    });
-  });
-  var arxBtn=document.getElementById('arxiv-fetch-btn');
-  if(arxBtn)arxBtn.addEventListener('click',function(){
-    sn('Fetching papers for '+n.name+' from ArXiv API…');
-    setTimeout(function(){
-      var fakePapers=['<div class="pcard"><div class="ptit">'+n.name+': recent advances and future directions (Nature Reviews, 2023) ×1,200</div><div class="pmeta"><span>Cited by</span><span class="pcite">1,200 papers</span></div></div>',
-        '<div class="pcard"><div class="ptit">Cross-disciplinary applications of '+n.name+' (Science, 2022) ×880</div><div class="pmeta"><span>Cited by</span><span class="pcite">880 papers</span></div></div>'];
-      ppEl.innerHTML=fakePapers.join('');
-      sn('Loaded 2 papers for '+n.name);
-    },900);
-  });
+  var conns=0;if(D&&D.links)D.links.forEach(function(l){if(l[0]===n.id||l[1]===n.id)conns++;});
+  var h='<div class="ndet"><div class="ndname" style="color:'+(n.gap?'var(--pu)':fc(n.field))+'">'+esc(n.name)+(n.gap?' ◆ Gap':n.core?' ★ Core':'')+'</div>';
+  h+='<div class="ndfield">'+esc(n.field)+'</div>';
+  h+='<div class="ndsgrid"><div class="ndstat"><div class="ndstval" style="color:'+fc(n.field)+'">'+(n.papers||0).toLocaleString()+'</div><div class="ndstlbl">Papers</div></div><div class="ndstat"><div class="ndstval" style="color:var(--pu)">'+conns+'</div><div class="ndstlbl">Links</div></div></div>';
+  h+='<div class="ndbody">'+esc(n.desc||'')+'</div>';
+  h+='<div class="ndbtns"><button class="ndbtn pr" id="nd-ai">🤖 Ask AI</button><button class="ndbtn" id="nd-papers">📚 Papers</button><button class="ndbtn" id="nd-expand">+ Expand</button></div></div>';
+  document.getElementById('ninsp').innerHTML=h;
+  document.getElementById('nd-ai').addEventListener('click',function(){openAIModal(n.name);});
+  document.getElementById('nd-papers').addEventListener('click',function(){openPapersModal(n);});
+  document.getElementById('nd-expand').addEventListener('click',function(){expandNode(n);});
+  loadPapersInto(n, document.getElementById('ppan'), 4);
   sn('Inspecting: '+n.name);
 }
 
-// ── D3 GRAPH ──
-function buildGraph(data, filt){
-  var svg=d3.select('#gsvg');svg.selectAll('*').remove();
-  var W=svg.node().clientWidth||700, H=svg.node().clientHeight||500;
+// Fetch real papers from Semantic Scholar and render
+async function loadPapersInto(node, container, limit){
+  container.innerHTML='<div class="papers-loading"><div class="lring-sm"></div> Loading real papers from Semantic Scholar…</div>';
+  // Check cache first
+  var cached=D&&D.papers&&D.papers[String(node.id)];
+  if(cached&&cached.length&&cached[0].paperId){renderPapers(cached,container);return;}
+  try{
+    var query=node.core?Q:(node.name+' '+Q);
+    var papers=await ssFetch(query,limit);
+    if(!papers.length)papers=await ssFetch(node.name,limit);
+    if(D)D.papers[String(node.id)]=papers;
+    renderPapers(papers,container);
+  }catch(e){container.innerHTML='<div class="papers-err">⚠ Could not reach Semantic Scholar. Check internet connection.<br><small>'+esc(e.message)+'</small></div>';}
+}
 
-  var nodes=data.nodes.filter(function(n){return !filt||n.field===filt||n.core;}).map(function(n){return Object.assign({},n);});
-  var nids={};nodes.forEach(function(n){nids[n.id]=true;});
-  var links=data.links.filter(function(l){return nids[l[0]]&&nids[l[1]];}).map(function(l){return{source:l[0],target:l[1]};});
-
-  function nr(d){return d.core?24:Math.max(7,Math.min(18,Math.sqrt((d.papers||5000)/700)));}
-
-  var sim=d3.forceSimulation(nodes)
-    .force('link',d3.forceLink(links).id(function(d){return d.id;}).distance(120).strength(.5))
-    .force('charge',d3.forceManyBody().strength(-300))
-    .force('center',d3.forceCenter(W/2,H/2))
-    .force('collision',d3.forceCollide(function(d){return nr(d)+16;}));
-
-  var defs=svg.append('defs');
-  defs.append('filter').attr('id','fgl').html('<feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>');
-  defs.append('filter').attr('id','fglp').html('<feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>');
-  defs.append('marker').attr('id','arr').attr('viewBox','0 -4 8 8').attr('refX',7).attr('markerWidth',5).attr('markerHeight',5).attr('orient','auto')
-    .append('path').attr('d','M0,-4L8,0L0,4').attr('fill','rgba(139,148,158,.35)');
-
-  var g=svg.append('g');
-
-  // Background grid
-  var grd=g.append('g');
-  for(var x=0;x<W*2;x+=50)grd.append('line').attr('x1',x-W).attr('y1',-H).attr('x2',x-W).attr('y2',H*2).attr('stroke','rgba(255,255,255,.01)').attr('stroke-width',1);
-  for(var y=0;y<H*2;y+=50)grd.append('line').attr('x1',-W).attr('y1',y-H).attr('x2',W*2).attr('y2',y-H).attr('stroke','rgba(255,255,255,.01)').attr('stroke-width',1);
-
-  // Links
-  var le=g.append('g').selectAll('line').data(links).enter().append('line')
-    .attr('stroke',function(l){var tid=l.target.id||l.target;var tn=nodes.find(function(n){return n.id===tid;});return tn&&tn.gap?'rgba(188,140,255,.3)':'rgba(139,148,158,.18)';})
-    .attr('stroke-width',1.4)
-    .attr('stroke-dasharray',function(l){var tid=l.target.id||l.target;var tn=nodes.find(function(n){return n.id===tid;});return tn&&tn.gap?'5,4':'none';})
-    .attr('marker-end','url(#arr)');
-
-  // Node groups
-  var ng=g.append('g').selectAll('g').data(nodes).enter().append('g')
-    .style('cursor','pointer')
-    .call(d3.drag()
-      .on('start',function(e,d){if(!e.active)sim.alphaTarget(.3).restart();d.fx=d.x;d.fy=d.y;})
-      .on('drag',function(e,d){d.fx=e.x;d.fy=e.y;})
-      .on('end',function(e,d){if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null;}));
-
-  // Core pulse ring
-  ng.filter(function(d){return d.core;}).append('circle').attr('r',function(d){return nr(d)+13;}).attr('fill','none').attr('stroke',function(d){return fc(d.field);}).attr('stroke-width',1).attr('opacity',.2);
-  // Gap dash ring
-  ng.filter(function(d){return d.gap;}).append('circle').attr('r',function(d){return nr(d)+11;}).attr('fill','none').attr('stroke','rgba(188,140,255,.3)').attr('stroke-width',1.5).attr('stroke-dasharray','4,3');
-  // Main circle
-  ng.append('circle').attr('class','nc').attr('id',function(d){return 'nc'+d.id;})
-    .attr('r',function(d){return nr(d);})
-    .attr('fill',function(d){return d.core?fc(d.field):d.gap?'rgba(188,140,255,.13)':'rgba(13,17,23,.88)';})
-    .attr('stroke',function(d){return d.gap?'#bc8cff':fc(d.field);})
-    .attr('stroke-width',function(d){return d.core?0:1.5;})
-    .attr('filter',function(d){return d.core?'url(#fgl)':d.gap?'url(#fglp)':null;});
-  // Labels
-  ng.append('text').attr('class','nlbl').attr('text-anchor','middle')
-    .attr('dy',function(d){return nr(d)+12;})
-    .attr('fill',function(d){return d.gap?'#bc8cff':d.core?'#e6edf3':'#8b949e';})
-    .attr('font-size',function(d){return d.core?12:9;})
-    .attr('font-weight',function(d){return d.core?700:400;})
-    .attr('font-family','Inter,sans-serif')
-    .text(function(d){return d.name;});
-  // Gap badge
-  ng.filter(function(d){return d.gap;}).append('text').attr('text-anchor','middle')
-    .attr('dy',function(d){return -(nr(d)+6);})
-    .attr('fill','#bc8cff').attr('font-size',8).attr('font-family','Inter,sans-serif').text('◆ gap');
-
-  // Tooltip
-  var tt=document.getElementById('tt');
-  ng.on('mouseover',function(e,d){
-    document.getElementById('ttn').textContent=d.name;
-    document.getElementById('ttf').textContent='Field: '+d.field;
-    document.getElementById('ttp').textContent=(d.papers||0).toLocaleString()+' papers indexed';
-    var tg=document.getElementById('ttg');
-    if(d.gap){tg.textContent='◆ UNEXPLORED INTERSECTION — breakthrough territory';tg.style.display='block';}
-    else{tg.style.display='none';}
-    tt.classList.add('on');
-  }).on('mousemove',function(e){
-    tt.style.left=(e.clientX+14)+'px';tt.style.top=(e.clientY-8)+'px';
-  }).on('mouseout',function(){
-    tt.classList.remove('on');
-  }).on('click',function(e,d){
-    e.stopPropagation();selNode(d);
+function renderPapers(papers,container){
+  if(!papers||!papers.length){container.innerHTML='<div style="font-size:11px;color:var(--tx3);padding:6px 0">No papers found.</div>';return;}
+  var h='';
+  papers.forEach(function(p,i){
+    var url=paperUrl(p);
+    var cite=(p.citationCount||0).toLocaleString();
+    var abs=p.abstract?(p.abstract.substring(0,300)+(p.abstract.length>300?'…':'')):null;
+    h+='<div class="pcard" data-idx="'+i+'">';
+    h+='<div class="pcard-title">'+esc(p.title||'Untitled')+'</div>';
+    h+='<div class="pcard-authors">'+esc(authorStr(p))+'</div>';
+    h+='<div class="pcard-venue">'+(p.venue?esc(p.venue)+', ':'')+esc(p.year||'')+'<span> ×'+cite+' citations</span></div>';
+    if(abs)h+='<div class="pcard-abstract">'+esc(abs)+'</div>';
+    h+='<div class="pcard-btns">';
+    h+='<a class="pbtn bl" href="'+url+'" target="_blank" rel="noopener" onclick="event.stopPropagation();sn(\'Opening paper…\')">Open ↗</a>';
+    h+='<button class="pbtn cite-btn" data-idx="'+i+'">Cite</button>';
+    h+='<button class="pbtn save-btn" data-idx="'+i+'">Save</button>';
+    h+='</div></div>';
   });
-
-  // Tick
-  sim.on('tick',function(){
-    le.attr('x1',function(d){return d.source.x;}).attr('y1',function(d){return d.source.y;})
-      .attr('x2',function(d){return d.target.x;}).attr('y2',function(d){return d.target.y;});
-    ng.attr('transform',function(d){
-      return 'translate('+Math.max(25,Math.min(W-25,d.x))+','+Math.max(25,Math.min(H-25,d.y))+')';
-    });
-  });
-
-  // Zoom
-  var zoom=d3.zoom().scaleExtent([.1,5]).on('zoom',function(e){g.attr('transform',e.transform);});
-  svg.call(zoom);SZ=zoom;
-}
-
-// ── GRAPH CONTROLS ──
-function zi(){if(SZ)d3.select('#gsvg').transition().call(SZ.scaleBy,1.4);}
-function zo(){if(SZ)d3.select('#gsvg').transition().call(SZ.scaleBy,.7);}
-function zr(){if(SZ)d3.select('#gsvg').transition().duration(500).call(SZ.transform,d3.zoomIdentity);}
-function tgl(){
-  SL=!SL;
-  d3.selectAll('.nlbl').style('display',SL?null:'none');
-  document.getElementById('lbtn').classList.toggle('on',SL);
-  sn(SL?'Labels on':'Labels hidden');
-}
-function hgl(){
-  GH=!GH;
-  d3.selectAll('.nc').attr('opacity',function(d){return GH?(d.gap?1:.12):1;});
-  d3.selectAll('.nlbl').attr('opacity',function(d){return GH?(d.gap?1:.12):1;});
-  document.getElementById('gbtn').classList.toggle('on',GH);
-  sn(GH?'Highlighting gaps only':'Showing all nodes');
-}
-function toggleAnim(){
-  ANIM=!ANIM;
-  document.getElementById('abtn').classList.toggle('on',ANIM);
-  if(ANIM){sn('Pulse animation on');animTick();}else{d3.selectAll('.nc').interrupt();sn('Animation off');}
-}
-function animTick(){
-  if(!ANIM)return;
-  d3.selectAll('.nc').filter(function(d){return d.gap;})
-    .transition().duration(800).attr('r',function(d){return (d.core?24:Math.max(7,Math.min(18,Math.sqrt((d.papers||5000)/700))))*1.35;})
-    .transition().duration(800).attr('r',function(d){return d.core?24:Math.max(7,Math.min(18,Math.sqrt((d.papers||5000)/700)));})
-    .on('end',animTick);
-}
-
-function setGM(mode,i){
-  var btns=document.querySelectorAll('.mbt');
-  btns.forEach(function(b){b.classList.remove('on');});
-  document.getElementById('mb'+i).classList.add('on');
-  if(!D){sn('Run a search first');return;}
-  if(mode==='force')buildGraph(D);
-  else if(mode==='radial')buildRadial();
-  else if(mode==='cluster')buildCluster();
-  else if(mode==='timeline')buildTimeline();
-}
-
-function buildRadial(){
-  if(!D)return;
-  var svg=d3.select('#gsvg');svg.selectAll('*').remove();
-  var W=svg.node().clientWidth||700,H=svg.node().clientHeight||500;
-  var g=svg.append('g').attr('transform','translate('+W/2+','+H/2+')');
-  var nodes=D.nodes,core=nodes.find(function(n){return n.core;});
-  var others=nodes.filter(function(n){return !n.core;});
-  var r=Math.min(W,H)*.36;
-  others.forEach(function(n,i){var a=(i/others.length)*2*Math.PI-Math.PI/2;n.rx=r*Math.cos(a);n.ry=r*Math.sin(a);});
-  D.links.forEach(function(l){
-    var s=nodes.find(function(n){return n.id===l[0];});
-    var t=nodes.find(function(n){return n.id===l[1];});
-    if(!s||!t)return;
-    var sx=s.core?0:s.rx,sy=s.core?0:s.ry,tx=t.core?0:t.rx,ty=t.core?0:t.ry;
-    g.append('line').attr('x1',sx).attr('y1',sy).attr('x2',tx).attr('y2',ty)
-      .attr('stroke',t.gap?'rgba(188,140,255,.3)':'rgba(139,148,158,.18)').attr('stroke-width',1.2);
-  });
-  g.append('circle').attr('r',26).attr('fill',fc(core.field)).style('filter','drop-shadow(0 0 10px '+fc(core.field)+')');
-  g.append('text').attr('text-anchor','middle').attr('dy','0.35em').attr('fill','#000').attr('font-size',9).attr('font-weight',700).attr('font-family','Inter,sans-serif').text(core.name.length>12?core.name.substring(0,12)+'…':core.name);
-  others.forEach(function(n){
-    var ng=g.append('g').style('cursor','pointer').on('click',function(){selNode(n);});
-    ng.append('circle').attr('cx',n.rx).attr('cy',n.ry).attr('r',n.gap?12:8).attr('fill',n.gap?'rgba(188,140,255,.15)':'rgba(13,17,23,.88)').attr('stroke',n.gap?'#bc8cff':fc(n.field)).attr('stroke-width',1.5);
-    ng.append('text').attr('x',n.rx).attr('y',n.ry+20).attr('text-anchor','middle').attr('fill',n.gap?'#bc8cff':'#8b949e').attr('font-size',8).attr('font-family','Inter,sans-serif').text(n.name.length>14?n.name.substring(0,14)+'…':n.name);
-  });
-  var zoom=d3.zoom().scaleExtent([.2,4]).on('zoom',function(e){g.attr('transform',e.transform);});
-  svg.call(zoom);SZ=zoom;sn('Radial layout — core concept at center');
-}
-
-function buildCluster(){
-  if(!D)return;
-  var svg=d3.select('#gsvg');svg.selectAll('*').remove();
-  var W=svg.node().clientWidth||700,H=svg.node().clientHeight||500;
-  var g=svg.append('g');
-  var fields=[];D.nodes.forEach(function(n){if(fields.indexOf(n.field)<0)fields.push(n.field);});
-  var cols=Math.ceil(Math.sqrt(fields.length)),rows=Math.ceil(fields.length/cols);
-  var cw=W/cols,ch=H/rows;
-  fields.forEach(function(f,fi){
-    var cx=(fi%cols)*cw+cw/2,cy=Math.floor(fi/cols)*ch+ch/2;
-    g.append('rect').attr('x',cx-cw/2+6).attr('y',cy-ch/2+6).attr('width',cw-12).attr('height',ch-12).attr('rx',8).attr('fill','rgba(255,255,255,.01)').attr('stroke',fc(f)).attr('stroke-width',1).attr('stroke-dasharray','4,4').attr('opacity',.4);
-    g.append('text').attr('x',cx).attr('y',cy-ch/2+20).attr('text-anchor','middle').attr('fill',fc(f)).attr('font-size',9).attr('font-weight',700).attr('font-family','Inter,sans-serif').text(f);
-    var fnodes=D.nodes.filter(function(n){return n.field===f;});
-    fnodes.forEach(function(n,ni){
-      var nx=cx-20+(ni%3)*22,ny=cy+(Math.floor(ni/3)-1)*26;
-      var ng=g.append('g').style('cursor','pointer').on('click',function(){selNode(n);});
-      ng.append('circle').attr('cx',nx).attr('cy',ny).attr('r',n.core?14:n.gap?10:6).attr('fill',n.core?fc(f):n.gap?'rgba(188,140,255,.15)':'rgba(13,17,23,.88)').attr('stroke',n.gap?'#bc8cff':fc(f)).attr('stroke-width',1.5);
-      if(n.gap||n.core)ng.append('text').attr('x',nx).attr('y',ny+19).attr('text-anchor','middle').attr('fill',n.gap?'#bc8cff':'#8b949e').attr('font-size',7).attr('font-family','Inter,sans-serif').text(n.name.length>10?n.name.substring(0,10)+'…':n.name);
-    });
-  });
-  var zoom=d3.zoom().scaleExtent([.2,4]).on('zoom',function(e){g.attr('transform',e.transform);});
-  svg.call(zoom);SZ=zoom;sn('Cluster layout — grouped by research field');
-}
-
-function buildTimeline(){
-  if(!D)return;
-  var svg=d3.select('#gsvg');svg.selectAll('*').remove();
-  var W=svg.node().clientWidth||700,H=svg.node().clientHeight||500;
-  var g=svg.append('g');
-  var tl=D.timeline,margin=70,uw=(W-margin*2)/(tl.length-1),midY=H/2;
-  g.append('line').attr('x1',margin).attr('y1',midY).attr('x2',W-margin).attr('y2',midY).attr('stroke','rgba(255,255,255,.14)').attr('stroke-width',2);
-  tl.forEach(function(t,i){
-    var x=margin+i*uw,above=i%2===0,yoff=above?-90:90;
-    g.append('line').attr('x1',x).attr('y1',midY).attr('x2',x).attr('y2',midY+yoff*.5).attr('stroke',t.color).attr('stroke-width',1.5).attr('stroke-dasharray','3,3');
-    g.append('circle').attr('cx',x).attr('cy',midY).attr('r',8).attr('fill',t.color).style('filter','drop-shadow(0 0 6px '+t.color+')');
-    var fo=g.append('foreignObject').attr('x',x-60).attr('y',midY+yoff-(above?65:0)).attr('width',120).attr('height',75);
-    var div=document.createElementNS('http://www.w3.org/1999/xhtml','div');
-    div.style.cssText='font-family:Inter,sans-serif;font-size:10px;color:#8b949e;text-align:center;line-height:1.4';
-    div.innerHTML='<strong style="color:'+t.color+';font-size:11px">'+t.year+'</strong><br>'+t.desc;
-    fo.node().appendChild(div);
-  });
-  g.append('text').attr('x',W/2).attr('y',22).attr('text-anchor','middle').attr('fill','#484f58').attr('font-size',11).attr('font-family','Inter,sans-serif').text(Q+' — Civilization Impact Timeline');
-  var zoom=d3.zoom().scaleExtent([.3,3]).on('zoom',function(e){g.attr('transform',e.transform);});
-  svg.call(zoom);SZ=zoom;sn('Timeline view — drag to pan, scroll to zoom');
-}
-
-// ── VIEW MODES ──
-function setView(mode,i){
-  var nbs=document.querySelectorAll('#hnav .nb');
-  nbs.forEach(function(b){b.classList.remove('on');});
-  document.getElementById('nv'+i).classList.add('on');
-  var show={explore:['secgaps','sechyps','secsim'],gaps:['secgaps'],hypotheses:['sechyps'],simulate:['secsim']};
-  ['secgaps','sechyps','secsim'].forEach(function(id){
-    var s=document.getElementById(id);
-    if(s)s.style.display=(!show[mode]||show[mode].indexOf(id)>=0)?'block':'none';
-  });
-  sn('View: '+mode[0].toUpperCase()+mode.slice(1));
-}
-
-// ── COMPARE & METRICS ──
-function openCompare(){
-  if(!D){sn('Run a search first');return;}
-  closeOverlay();
-  document.getElementById('cmpv').classList.add('on');
-  document.getElementById('gsvg').style.visibility='hidden';
-  document.querySelectorAll('.gctrls,.gleg,.mtog,.ghint').forEach(function(e){e.style.display='none';});
-  document.querySelectorAll('#hnav .nb').forEach(function(b){b.classList.remove('on');});
-  document.getElementById('nv4').classList.add('on');
-  var fields=[];D.nodes.forEach(function(n){if(fields.indexOf(n.field)<0)fields.push(n.field);});
-  var html='<div class="cmgrid">';
-  fields.forEach(function(f){
-    var fn=D.nodes.filter(function(n){return n.field===f;});
-    var tp=fn.reduce(function(a,n){return a+(n.papers||0);},0);
-    var gc=fn.filter(function(n){return n.gap;}).length;
-    var cn=D.links.filter(function(l){return fn.some(function(n){return n.id===l[0]||n.id===l[1];});}).length;
-    html+='<div class="cmc"><div class="cmh" style="color:'+fc(f)+'">'+f+'</div>';
-    html+='<div class="cmrow"><span class="cmk">Concepts</span><span class="cmv">'+fn.length+'</span></div>';
-    html+='<div class="cmrow"><span class="cmk">Total papers</span><span class="cmv">'+tp.toLocaleString()+'</span></div>';
-    html+='<div class="cmrow"><span class="cmk">Connections</span><span class="cmv">'+cn+'</span></div>';
-    html+='<div class="cmrow"><span class="cmk">Gaps found</span><span class="cmv" style="color:var(--pu)">'+gc+'</span></div>';
-    html+='<div class="cmrow"><span class="cmk">Opportunity</span><span class="cmv" style="color:'+(gc>0?'var(--re)':'var(--gr)')+'">'+( gc>0?'HIGH':'Well studied')+'</span></div></div>';
-  });
-  html+='</div>';
-  document.getElementById('cmg').innerHTML=html;
-}
-
-function openMetrics(){
-  if(!D){sn('Run a search first');return;}
-  closeOverlay();
-  document.getElementById('metv').classList.add('on');
-  document.getElementById('gsvg').style.visibility='hidden';
-  document.querySelectorAll('.gctrls,.gleg,.mtog,.ghint').forEach(function(e){e.style.display='none';});
-  document.querySelectorAll('#hnav .nb').forEach(function(b){b.classList.remove('on');});
-  document.getElementById('nv5').classList.add('on');
-
-  var totalP=D.nodes.reduce(function(a,n){return a+(n.papers||0);},0);
-  var gapN=D.nodes.filter(function(n){return n.gap;}).length;
-  var avgC=D.links.length/Math.max(D.nodes.length,1);
-  var fields=[];D.nodes.forEach(function(n){if(fields.indexOf(n.field)<0)fields.push(n.field);});
-  var density=(D.links.length/(D.nodes.length*(D.nodes.length-1)/2)*100).toFixed(1);
-
-  document.getElementById('metgrid').innerHTML=
-    '<div class="metcard"><div class="metval" style="color:var(--ac)">'+totalP.toLocaleString()+'</div><div class="metlbl">Total Papers Indexed</div><div class="metbar"><div class="metfill" style="width:78%;background:var(--ac)"></div></div><div class="metsub">Across '+fields.length+' research fields</div></div>'+
-    '<div class="metcard"><div class="metval" style="color:var(--pu)">'+gapN+'</div><div class="metlbl">Knowledge Gaps Detected</div><div class="metbar"><div class="metfill" style="width:'+Math.round(gapN/D.nodes.length*100)+'%;background:var(--pu)"></div></div><div class="metsub">'+Math.round(gapN/D.nodes.length*100)+'% of concepts are unexplored intersections</div></div>'+
-    '<div class="metcard"><div class="metval" style="color:var(--gr)">'+avgC.toFixed(1)+'</div><div class="metlbl">Avg Connections / Node</div><div class="metbar"><div class="metfill" style="width:'+Math.min(100,Math.round(avgC*15))+'%;background:var(--gr)"></div></div><div class="metsub">Network density: '+density+'%</div></div>'+
-    '<div class="metcard"><div class="metval" style="color:var(--or)">'+D.hypotheses.length+'</div><div class="metlbl">Novel Hypotheses Generated</div><div class="metbar"><div class="metfill" style="width:'+(D.hypotheses.length*25)+'%;background:var(--or)"></div></div><div class="metsub">All validated against 5 criteria</div></div>';
-
-  var sorted=D.nodes.slice().sort(function(a,b){return(b.papers||0)-(a.papers||0);}).slice(0,6);
-  var maxP=sorted[0]?sorted[0].papers||1:1;
-  var db='';
-  sorted.forEach(function(n){
-    var pct=Math.round((n.papers||0)/maxP*100);
-    db+='<div class="densrow"><div class="denshead"><span>'+n.name+'</span><span>'+((n.papers||0)).toLocaleString()+'</span></div><div class="densbar"><div class="densfill" style="width:'+pct+'%;background:'+(n.gap?'var(--pu)':fc(n.field))+'"></div></div></div>';
-  });
-  document.getElementById('densbar').innerHTML=db;
-}
-
-function closeOverlay(){
-  document.getElementById('cmpv').classList.remove('on');
-  document.getElementById('metv').classList.remove('on');
-  document.getElementById('gsvg').style.visibility='visible';
-  document.querySelectorAll('.gctrls,.gleg,.ghint').forEach(function(e){e.style.display='';});
-  document.querySelector('.mtog').style.display='flex';
-}
-
-// ── EXPORT ──
-function toggleExport(){
-  var ep=document.getElementById('expp');
-  ep.style.display=(ep.style.display==='none'||ep.style.display==='')?'block':'none';
-  if(ep.style.display==='block')sn('Export options ready');
-}
-function exJSON(){
-  if(!D){sn('Run a search first');return;}
-  var obj={query:Q,generated:new Date().toISOString(),nodes:D.nodes,links:D.links,gaps:D.gaps,hypotheses:D.hypotheses,timeline:D.timeline};
-  var b=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});
-  var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='genesis-'+Q.replace(/\s+/g,'-')+'.json';a.click();
-  sn('JSON exported ✓');
-}
-function exCSV(){
-  if(!D){sn('Run a search first');return;}
-  var rows=['id,name,field,papers,gap,core'];
-  D.nodes.forEach(function(n){rows.push(n.id+',"'+n.name+'","'+n.field+'",'+( n.papers||0)+','+!!n.gap+','+!!n.core);});
-  var b=new Blob([rows.join('\n')],{type:'text/csv'});
-  var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='genesis-'+Q.replace(/\s+/g,'-')+'.csv';a.click();
-  sn('CSV exported ✓');
-}
-function exSVG(){
-  var s=document.getElementById('gsvg');
-  var b=new Blob([new XMLSerializer().serializeToString(s)],{type:'image/svg+xml'});
-  var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='genesis-'+Q.replace(/\s+/g,'-')+'.svg';a.click();
-  sn('Graph exported as SVG ✓');
-}
-function cpReport(){
-  if(!D){sn('Run a search first');return;}
-  var lines=['GENESIS RESEARCH REPORT','='.repeat(50),'Query: '+Q,'Generated: '+new Date().toLocaleDateString(),'Concepts: '+D.nodes.length+' | Connections: '+D.links.length+' | Gaps: '+D.gaps.length,''];
-  lines.push('KNOWLEDGE GAPS DETECTED:');
-  D.gaps.forEach(function(g,i){lines.push((i+1)+'. '+g.title);lines.push('   '+g.desc);lines.push('   Co-citations: '+g.count);lines.push('');});
-  lines.push('NOVEL HYPOTHESES:');
-  D.hypotheses.forEach(function(h,i){lines.push((i+1)+'. '+h.title);lines.push('   '+h.desc);lines.push('');});
-  lines.push('50-YEAR CIVILIZATION TIMELINE:');
-  D.timeline.forEach(function(t){lines.push('• '+t.year+': '+t.desc);});
-  navigator.clipboard.writeText(lines.join('\n')).then(function(){sn('Full report copied to clipboard ✓','rgba(63,185,80,.5)');});
-}
-
-// ── THEME ──
-function toggleTheme(){
-  LIGHTMODE=!LIGHTMODE;
-  var r=document.documentElement;
-  if(LIGHTMODE){
-    r.style.setProperty('--bg','#f4f5f7');r.style.setProperty('--bg2','#ffffff');
-    r.style.setProperty('--bg3','#f0f2f5');r.style.setProperty('--bg4','#e8eaed');
-    r.style.setProperty('--tx','#1a1a2e');r.style.setProperty('--tx2','#4a4a6a');r.style.setProperty('--tx3','#8a8aaa');
-    r.style.setProperty('--b1','rgba(0,0,0,.07)');r.style.setProperty('--b2','rgba(0,0,0,.14)');
-  } else {
-    r.style.setProperty('--bg','#030712');r.style.setProperty('--bg2','#0d1117');
-    r.style.setProperty('--bg3','#161b22');r.style.setProperty('--bg4','#1c2230');
-    r.style.setProperty('--tx','#e6edf3');r.style.setProperty('--tx2','#8b949e');r.style.setProperty('--tx3','#484f58');
-    r.style.setProperty('--b1','rgba(255,255,255,.07)');r.style.setProperty('--b2','rgba(255,255,255,.14)');
-  }
-  sn(LIGHTMODE?'Light mode':'Dark mode');
-}
-
-// ── AI MODAL ──
-var AIR={
-  def:'<h4>Genesis AI Research Assistant</h4><p>I can analyze the knowledge graph and identify the highest-leverage research opportunities. Try asking:</p><ul><li>What is the most critical gap in this graph?</li><li>Explain the first hypothesis in detail</li><li>What would happen if this research succeeded?</li><li>Which field has the most unexplored territory?</li><li>Compare the three hypotheses</li></ul>',
-  gap:'<h4>Most Critical Knowledge Gap</h4><p>The highest-priority gap is the intersection of <strong>quantum sensing and plasma diagnostics</strong>.</p><p>Both fields are mature and well-funded independently. The mathematical framework is identical — measuring rapidly-evolving quantum states with minimal perturbation. Yet Genesis found <strong>zero co-citations</strong> across 200M papers.</p><p>This is the Fleming pattern: the solution to problem B already exists in field A, but no one has looked there. Estimated impact if bridged: 10–15 year acceleration of commercial fusion energy.</p>',
-  hyp:'<h4>Hypothesis Deep Dive</h4><p>The <strong>Quantum Plasma Diagnostics</strong> hypothesis scores 94/100 on Genesis confidence, passing all five validation criteria:</p><ul><li><strong>Bridging:</strong> Spans Physics, Quantum, Engineering — three distinct clusters</li><li><strong>Specificity:</strong> Entanglement-based sensing at the Heisenberg limit for plasma tomography</li><li><strong>Testability:</strong> Testable with existing NV-center sensors in a lab plasma within 18 months</li><li><strong>Novelty:</strong> Semantic similarity to existing hypotheses: 0.12 (very novel)</li><li><strong>Grounding:</strong> 14 quantum sensing papers + 8 plasma diagnostics papers as foundation</li></ul><p>Estimated impact if validated: <strong>10–15 year acceleration</strong> of commercial fusion energy.</p>',
-  sim:'<h4>Civilization Simulation Results</h4><p>If all three top hypotheses are validated and developed:</p><ul><li><strong>2030:</strong> Quantum diagnostics reduce confinement failures 89% — sustained Q>1 becomes routine</li><li><strong>2034:</strong> First commercial fusion plant via grid-AI co-design. Integration costs down 61%.</li><li><strong>2041:</strong> Fusion reaches grid parity in 28 countries. Coal begins rapid decline.</li><li><strong>2053:</strong> Fusion-powered desalination ends water scarcity for 2.1B people</li><li><strong>2067:</strong> Global CO₂ begins falling for first time since the industrial revolution</li></ul>'
-};
-
-function openAI(ctx){
-  document.getElementById('aim').classList.add('on');
-  document.getElementById('art').innerHTML=AIR.def;
-  if(ctx){document.getElementById('aiinp').value='Tell me about '+ctx+' in this knowledge graph';}
-  setTimeout(function(){document.getElementById('aiinp').focus();},50);
-}
-function closeAI(){document.getElementById('aim').classList.remove('on');}
-function sendAI(){
-  var inp=document.getElementById('aiinp'),q=inp.value.trim();
-  if(!q)return;inp.value='';
-  document.getElementById('art').innerHTML='<div class="atk"><div class="adts"><span></span><span></span><span></span></div> Analyzing knowledge graph…</div>';
-  setTimeout(function(){
-    var ql=q.toLowerCase(),r=AIR.def;
-    if(ql.indexOf('gap')>=0||ql.indexOf('unexplored')>=0||ql.indexOf('missing')>=0||ql.indexOf('blind')>=0)r=AIR.gap;
-    else if(ql.indexOf('hypothes')>=0||ql.indexOf('detail')>=0||ql.indexOf('explain')>=0||ql.indexOf('score')>=0)r=AIR.hyp;
-    else if(ql.indexOf('simulat')>=0||ql.indexOf('impact')>=0||ql.indexOf('civiliz')>=0||ql.indexOf('future')>=0||ql.indexOf('timeline')>=0)r=AIR.sim;
-    else if(D){r='<h4>Analysis: "'+q+'"</h4><p>In the <strong>'+Q+'</strong> knowledge graph, Genesis mapped '+D.nodes.length+' concepts across '+([...new Set(D.nodes.map(function(n){return n.field;}))].length)+' research fields with '+D.links.length+' connections and '+D.gaps.length+' knowledge gaps.</p><p>Most relevant: the highest-priority gap is <strong>'+D.gaps[0].title+'</strong>. '+D.gaps[0].desc+'</p><p>Most actionable hypothesis: <strong>'+D.hypotheses[0].title+'</strong> — '+D.hypotheses[0].desc+'</p>';}
-    document.getElementById('art').innerHTML=r;
-    document.getElementById('abdy').scrollTop=9999;
-  },1100);
-}
-
-// ── HELPER FUNCTIONS FOR NODE ACTIONS ──
-function showPapersModal(n){
-  var papers=(D&&D.papers&&D.papers[n.id])||[];
-  // Always add generic papers if none indexed
-  var allPapers=papers.length?papers:[
-    n.name+': recent advances and open problems (Nature Reviews, 2023) ×'+Math.floor(Math.random()*3000+500),
-    'Cross-disciplinary perspectives on '+n.name+' (Science, 2022) ×'+Math.floor(Math.random()*2000+300),
-    n.name+' — mechanistic insights and therapeutic targets (Cell, 2022) ×'+Math.floor(Math.random()*1500+200),
-    'The future of '+n.name+': a 10-year outlook (PNAS, 2023) ×'+Math.floor(Math.random()*1000+100)
-  ];
-
-  // Build modal content
-  var mhtml='<div style="margin-bottom:12px"><span style="font-size:11px;color:var(--tx2)">Showing top papers for </span><span style="font-weight:700;color:var(--ac)">'+n.name+'</span></div>';
-  for(var i=0;i<allPapers.length;i++){
-    var p=allPapers[i];var pt=p.split(' ×');
-    mhtml+='<div class="pcard" style="margin-bottom:8px;cursor:pointer" data-pidx="'+i+'"><div style="display:flex;justify-content:space-between;align-items:flex-start;gap:8px"><div class="ptit" style="font-size:11px">'+pt[0]+'</div><div style="flex-shrink:0;font-size:10px;background:rgba(88,166,255,.12);color:var(--ac);padding:2px 7px;border-radius:8px;white-space:nowrap">×'+( pt[1]||'—')+'</div></div><div style="margin-top:5px;display:flex;gap:6px"><button class="open-paper-btn exbtn" style="padding:4px 10px;font-size:10px;flex:none" data-title="'+pt[0].replace(/"/g,"'")+'">Open ↗</button><button class="cite-btn exbtn" style="padding:4px 10px;font-size:10px;flex:none">Cite</button><button class="save-btn exbtn" style="padding:4px 10px;font-size:10px;flex:none">Save</button></div></div>';
-  }
-
-  document.getElementById('pm-title').textContent='📚 Papers — '+n.name;
-  document.getElementById('pm-body').innerHTML=mhtml;
-
-  // Wire buttons
-  document.querySelectorAll('.open-paper-btn').forEach(function(btn){
+  container.innerHTML=h;
+  container.querySelectorAll('.pcard').forEach(function(card){card.addEventListener('click',function(e){if(e.target.tagName==='A'||e.target.tagName==='BUTTON')return;card.classList.toggle('expanded');});});
+  container.querySelectorAll('.cite-btn').forEach(function(btn){
     btn.addEventListener('click',function(e){
       e.stopPropagation();
-      sn('Opening: '+btn.getAttribute('data-title').substring(0,50)+'…','rgba(88,166,255,.5)');
+      var p=papers[parseInt(btn.getAttribute('data-idx'))];if(!p)return;
+      var cite=authorStr(p)+'. "'+p.title+'." '+(p.venue||'')+(p.year?', '+p.year:'')+'. doi:'+(p.externalIds&&p.externalIds.DOI||paperUrl(p));
+      navigator.clipboard.writeText(cite).then(function(){sn('Citation copied ✓','rgba(63,185,80,.5)');}).catch(function(){sn(p.title.substring(0,50)+'…');});
     });
   });
-  document.querySelectorAll('.cite-btn').forEach(function(btn,ci){
-    btn.addEventListener('click',function(e){
-      e.stopPropagation();
-      var citetxt='['+( ci+1)+'] '+allPapers[ci].split(' ×')[0]+'. Genesis Knowledge Graph, 2026.';
-      navigator.clipboard.writeText(citetxt).then(function(){sn('Citation copied to clipboard ✓','rgba(63,185,80,.5)');}).catch(function(){sn('Citation: '+allPapers[ci].split(' ×')[0].substring(0,40)+'…');});
-    });
-  });
-  document.querySelectorAll('.save-btn').forEach(function(btn,si){
-    btn.addEventListener('click',function(e){
-      e.stopPropagation();
-      sn('Paper saved to reading list: '+allPapers[si].split(' ×')[0].substring(0,40)+'…','rgba(63,185,80,.5)');
-    });
-  });
-
-  document.getElementById('papers-modal').classList.add('on');
-  // Update side panel too
-  document.getElementById('ppan').innerHTML=document.getElementById('pm-body').innerHTML;
+  container.querySelectorAll('.save-btn').forEach(function(btn){btn.addEventListener('click',function(e){e.stopPropagation();var p=papers[parseInt(btn.getAttribute('data-idx'))];sn('Saved: '+(p?p.title.substring(0,45)+'…':'paper')+' ✓','rgba(63,185,80,.5)');});});
 }
 
-function expandNode(n){
-  if(!D)return;
-  sn('Expanding '+n.name+' — discovering adjacent concepts…');
-  // Simulate adding new nodes connected to this one
-  setTimeout(function(){
-    var newId=D.nodes.length+100+Math.floor(Math.random()*100);
-    var syntheticNodes=[
-      {id:newId,name:'Adjacent Field '+Math.floor(Math.random()*99),field:n.field,papers:Math.floor(Math.random()*8000+1000),desc:'Newly discovered connection to '+n.name+' via semantic similarity analysis.'},
-      {id:newId+1,name:'Emerging Intersection',field:'Research',papers:Math.floor(Math.random()*3000+500),gap:true,desc:'Unexplored intersection discovered by expanding the '+n.name+' subgraph.'}
-    ];
-    syntheticNodes.forEach(function(sn2){D.nodes.push(sn2);});
-    D.links.push([n.id,newId],[n.id,newId+1]);
-    D.gaps.push({title:n.name+' × Emerging Field',desc:'Newly detected gap adjacent to '+n.name+'. Expansion revealed 2 unexplored intersections.',count:0});
+function openPapersModal(node){
+  document.getElementById('pmtitle').textContent='📚 Real Papers — '+node.name;
+  var body=document.getElementById('pmbody');
+  var info='<div style="font-size:11px;color:var(--tx2);margin-bottom:12px;padding:8px;background:rgba(88,166,255,.06);border-radius:6px;border-left:2px solid var(--ac)">Live data from <strong style="color:var(--ac)">Semantic Scholar</strong> · Free public API · Tap Open ↗ to view PDFs · Cite to copy citation</div>';
+  body.innerHTML=info+'<div id="pm-papers-inner"></div>';
+  loadPapersInto(node,document.getElementById('pm-papers-inner'),8);
+  document.getElementById('pm').classList.add('on');
+}
+function closePM(){document.getElementById('pm').classList.remove('on');}
+
+async function expandNode(node){
+  sn('Expanding '+node.name+' — fetching adjacent concepts…');
+  try{
+    var r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:300,messages:[{role:'user',content:'Give 2 real research areas adjacent to "'+node.name+'" not yet in the knowledge graph for "'+Q+'". JSON only: [{"name":"Area","field":"Field","papers":N,"desc":"Why relevant","gap":true},{"name":"Area2","field":"Field","papers":N,"desc":"Why relevant","gap":false}]'}]})});
+    var data=await r.json();var txt=data.content[0].text.trim().replace(/^```json\s*/,'').replace(/^```\s*/,'').replace(/\s*```$/,'');
+    var nn=JSON.parse(txt);var bid=D.nodes.length+Math.floor(Math.random()*100)+50;
+    nn.forEach(function(n,i){n.id=bid+i;D.nodes.push(n);D.links.push([node.id,n.id]);});
     document.getElementById('stg').textContent=D.nodes.filter(function(x){return x.gap;}).length;
     document.getElementById('stn').textContent=D.nodes.length;
     document.getElementById('ste').textContent=D.links.length;
-    buildGraph(D);
-    buildRP(D);
-    sn('Graph expanded — 2 new concepts added for '+n.name);
-  },800);
+    buildGraph(D);buildRP(D);sn('Expanded — '+nn.length+' real concepts added','rgba(88,166,255,.5)');
+  }catch(e){sn('Expand failed: '+e.message,'rgba(255,123,114,.5)');}
 }
 
-// ── KEYBOARD ──
-document.addEventListener('keydown',function(e){
-  if(e.key==='Escape'){closeAI();closeOverlay();}
-});
+// D3 GRAPH
+function buildGraph(data,filt){
+  var svg=d3.select('#gsvg');svg.selectAll('*').remove();
+  var W=svg.node().clientWidth||700,H=svg.node().clientHeight||500;
+  var nodes=data.nodes.filter(function(n){return !filt||n.field===filt||n.core;}).map(function(n){return Object.assign({},n);});
+  var nids={};nodes.forEach(function(n){nids[n.id]=true;});
+  var links=data.links.filter(function(l){return nids[l[0]]&&nids[l[1]];}).map(function(l){return{source:l[0],target:l[1]};});
+  function nr(d){return d.core?24:Math.max(7,Math.min(18,Math.sqrt((d.papers||5000)/700)));}
+  var sim=d3.forceSimulation(nodes).force('link',d3.forceLink(links).id(function(d){return d.id;}).distance(120).strength(.5)).force('charge',d3.forceManyBody().strength(-300)).force('center',d3.forceCenter(W/2,H/2)).force('collision',d3.forceCollide(function(d){return nr(d)+16;}));
+  var defs=svg.append('defs');
+  defs.append('filter').attr('id','fgl').html('<feGaussianBlur stdDeviation="4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>');
+  defs.append('filter').attr('id','fglp').html('<feGaussianBlur stdDeviation="7" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>');
+  defs.append('marker').attr('id','arr').attr('viewBox','0 -4 8 8').attr('refX',7).attr('markerWidth',5).attr('markerHeight',5).attr('orient','auto').append('path').attr('d','M0,-4L8,0L0,4').attr('fill','rgba(139,148,158,.35)');
+  var g=svg.append('g');
+  var grd=g.append('g');for(var x=0;x<W*2;x+=50)grd.append('line').attr('x1',x-W).attr('y1',-H).attr('x2',x-W).attr('y2',H*2).attr('stroke','rgba(255,255,255,.01)').attr('stroke-width',1);for(var y=0;y<H*2;y+=50)grd.append('line').attr('x1',-W).attr('y1',y-H).attr('x2',W*2).attr('y2',y-H).attr('stroke','rgba(255,255,255,.01)').attr('stroke-width',1);
+  var le=g.append('g').selectAll('line').data(links).enter().append('line').attr('stroke',function(l){var t=nodes.find(function(n){return n.id===(l.target.id||l.target);});return t&&t.gap?'rgba(188,140,255,.3)':'rgba(139,148,158,.18)';}).attr('stroke-width',1.4).attr('stroke-dasharray',function(l){var t=nodes.find(function(n){return n.id===(l.target.id||l.target);});return t&&t.gap?'5,4':'none';}).attr('marker-end','url(#arr)');
+  var ng=g.append('g').selectAll('g').data(nodes).enter().append('g').style('cursor','pointer').call(d3.drag().on('start',function(e,d){if(!e.active)sim.alphaTarget(.3).restart();d.fx=d.x;d.fy=d.y;}).on('drag',function(e,d){d.fx=e.x;d.fy=e.y;}).on('end',function(e,d){if(!e.active)sim.alphaTarget(0);d.fx=null;d.fy=null;}));
+  ng.filter(function(d){return d.core;}).append('circle').attr('r',function(d){return nr(d)+13;}).attr('fill','none').attr('stroke',function(d){return fc(d.field);}).attr('stroke-width',1).attr('opacity',.2);
+  ng.filter(function(d){return d.gap;}).append('circle').attr('r',function(d){return nr(d)+11;}).attr('fill','none').attr('stroke','rgba(188,140,255,.3)').attr('stroke-width',1.5).attr('stroke-dasharray','4,3');
+  ng.append('circle').attr('class','nc').attr('id',function(d){return 'nc'+d.id;}).attr('r',function(d){return nr(d);}).attr('fill',function(d){return d.core?fc(d.field):d.gap?'rgba(188,140,255,.13)':'rgba(13,17,23,.88)';}).attr('stroke',function(d){return d.gap?'#bc8cff':fc(d.field);}).attr('stroke-width',function(d){return d.core?0:1.5;}).attr('filter',function(d){return d.core?'url(#fgl)':d.gap?'url(#fglp)':null;});
+  ng.append('text').attr('class','nlbl').attr('text-anchor','middle').attr('dy',function(d){return nr(d)+12;}).attr('fill',function(d){return d.gap?'#bc8cff':d.core?'#e6edf3':'#8b949e';}).attr('font-size',function(d){return d.core?12:9;}).attr('font-weight',function(d){return d.core?700:400;}).attr('font-family','Inter,sans-serif').text(function(d){return d.name;});
+  ng.filter(function(d){return d.gap;}).append('text').attr('text-anchor','middle').attr('dy',function(d){return -(nr(d)+6);}).attr('fill','#bc8cff').attr('font-size',8).attr('font-family','Inter,sans-serif').text('◆ gap');
+  var tt=document.getElementById('tt');
+  ng.on('mouseover',function(e,d){document.getElementById('ttn').textContent=d.name;document.getElementById('ttf').textContent='Field: '+d.field;document.getElementById('ttp').textContent=(d.papers||0).toLocaleString()+' papers';var tg=document.getElementById('ttg');if(d.gap){tg.textContent='◆ UNEXPLORED INTERSECTION';tg.style.display='block';}else{tg.style.display='none';}tt.classList.add('on');}).on('mousemove',function(e){tt.style.left=(e.clientX+14)+'px';tt.style.top=(e.clientY-8)+'px';}).on('mouseout',function(){tt.classList.remove('on');}).on('click',function(e,d){e.stopPropagation();selNode(d);});
+  sim.on('tick',function(){le.attr('x1',function(d){return d.source.x;}).attr('y1',function(d){return d.source.y;}).attr('x2',function(d){return d.target.x;}).attr('y2',function(d){return d.target.y;});ng.attr('transform',function(d){return 'translate('+Math.max(25,Math.min(W-25,d.x))+','+Math.max(25,Math.min(H-25,d.y))+')';});});
+  var zoom=d3.zoom().scaleExtent([.1,5]).on('zoom',function(e){g.attr('transform',e.transform);});svg.call(zoom);SZ=zoom;
+}
+function zi(){if(SZ)d3.select('#gsvg').transition().call(SZ.scaleBy,1.4);}
+function zo(){if(SZ)d3.select('#gsvg').transition().call(SZ.scaleBy,.7);}
+function zr(){if(SZ)d3.select('#gsvg').transition().duration(500).call(SZ.transform,d3.zoomIdentity);}
+function tgl(){SL=!SL;d3.selectAll('.nlbl').style('display',SL?null:'none');document.getElementById('lbtn').classList.toggle('on',SL);sn(SL?'Labels on':'Labels off');}
+function hgl(){GH=!GH;d3.selectAll('.nc').attr('opacity',function(d){return GH?(d.gap?1:.12):1;});d3.selectAll('.nlbl').attr('opacity',function(d){return GH?(d.gap?1:.12):1;});document.getElementById('gbtn').classList.toggle('on',GH);sn(GH?'Gaps only':'All nodes');}
+function toggleAnim(){ANIM=!ANIM;document.getElementById('abtn').classList.toggle('on',ANIM);if(ANIM){animTick();}else{d3.selectAll('.nc').interrupt();sn('Animation off');}}
+function animTick(){if(!ANIM)return;d3.selectAll('.nc').filter(function(d){return d.gap;}).transition().duration(800).attr('r',function(d){return(d.core?24:Math.max(7,Math.min(18,Math.sqrt((d.papers||5000)/700))))*1.35;}).transition().duration(800).attr('r',function(d){return d.core?24:Math.max(7,Math.min(18,Math.sqrt((d.papers||5000)/700)));}).on('end',animTick);}
+function setGM(m,i){document.querySelectorAll('.mbt').forEach(function(b,j){b.classList.toggle('on',j===i);});if(!D){sn('Run a search first');return;}if(m==='force')buildGraph(D);else if(m==='radial')buildRadial();else if(m==='cluster')buildCluster();else if(m==='timeline')buildTimeline();}
+function buildRadial(){if(!D)return;var svg=d3.select('#gsvg');svg.selectAll('*').remove();var W=svg.node().clientWidth||700,H=svg.node().clientHeight||500;var g=svg.append('g').attr('transform','translate('+W/2+','+H/2+')');var nodes=D.nodes,core=nodes.find(function(n){return n.core;})||nodes[0];var others=nodes.filter(function(n){return !n.core;});var r=Math.min(W,H)*.36;others.forEach(function(n,i){var a=(i/others.length)*2*Math.PI-Math.PI/2;n.rx=r*Math.cos(a);n.ry=r*Math.sin(a);});D.links.forEach(function(l){var s=nodes.find(function(n){return n.id===l[0];});var t=nodes.find(function(n){return n.id===l[1];});if(!s||!t)return;g.append('line').attr('x1',s.core?0:s.rx||0).attr('y1',s.core?0:s.ry||0).attr('x2',t.core?0:t.rx||0).attr('y2',t.core?0:t.ry||0).attr('stroke',t.gap?'rgba(188,140,255,.3)':'rgba(139,148,158,.18)').attr('stroke-width',1.2);});g.append('circle').attr('r',26).attr('fill',fc(core.field)).style('filter','drop-shadow(0 0 10px '+fc(core.field)+')');g.append('text').attr('text-anchor','middle').attr('dy','0.35em').attr('fill','#000').attr('font-size',9).attr('font-weight',700).attr('font-family','Inter,sans-serif').text(core.name.length>12?core.name.substring(0,12)+'…':core.name);others.forEach(function(n){var ng2=g.append('g').style('cursor','pointer').on('click',function(){selNode(n);});ng2.append('circle').attr('cx',n.rx||0).attr('cy',n.ry||0).attr('r',n.gap?12:8).attr('fill',n.gap?'rgba(188,140,255,.15)':'rgba(13,17,23,.88)').attr('stroke',n.gap?'#bc8cff':fc(n.field)).attr('stroke-width',1.5);ng2.append('text').attr('x',n.rx||0).attr('y',(n.ry||0)+20).attr('text-anchor','middle').attr('fill',n.gap?'#bc8cff':'#8b949e').attr('font-size',8).attr('font-family','Inter,sans-serif').text(n.name.length>14?n.name.substring(0,14)+'…':n.name);});var zoom=d3.zoom().scaleExtent([.2,4]).on('zoom',function(e){g.attr('transform',e.transform);});svg.call(zoom);SZ=zoom;sn('Radial layout');}
+function buildCluster(){if(!D)return;var svg=d3.select('#gsvg');svg.selectAll('*').remove();var W=svg.node().clientWidth||700,H=svg.node().clientHeight||500;var g=svg.append('g');var fields=[];D.nodes.forEach(function(n){if(fields.indexOf(n.field)<0)fields.push(n.field);});var cols=Math.ceil(Math.sqrt(fields.length)),cw=W/cols,ch=H/Math.ceil(fields.length/cols);fields.forEach(function(f,fi){var cx=(fi%cols)*cw+cw/2,cy=Math.floor(fi/cols)*ch+ch/2;g.append('rect').attr('x',cx-cw/2+6).attr('y',cy-ch/2+6).attr('width',cw-12).attr('height',ch-12).attr('rx',8).attr('fill','rgba(255,255,255,.01)').attr('stroke',fc(f)).attr('stroke-width',1).attr('stroke-dasharray','4,4').attr('opacity',.4);g.append('text').attr('x',cx).attr('y',cy-ch/2+20).attr('text-anchor','middle').attr('fill',fc(f)).attr('font-size',9).attr('font-weight',700).attr('font-family','Inter,sans-serif').text(f);D.nodes.filter(function(n){return n.field===f;}).forEach(function(n,ni){var nx=cx-20+(ni%3)*22,ny=cy+(Math.floor(ni/3)-1)*26;var ng2=g.append('g').style('cursor','pointer').on('click',function(){selNode(n);});ng2.append('circle').attr('cx',nx).attr('cy',ny).attr('r',n.core?14:n.gap?10:6).attr('fill',n.core?fc(f):n.gap?'rgba(188,140,255,.15)':'rgba(13,17,23,.88)').attr('stroke',n.gap?'#bc8cff':fc(f)).attr('stroke-width',1.5);if(n.gap||n.core)ng2.append('text').attr('x',nx).attr('y',ny+19).attr('text-anchor','middle').attr('fill',n.gap?'#bc8cff':'#8b949e').attr('font-size',7).attr('font-family','Inter,sans-serif').text(n.name.length>10?n.name.substring(0,10)+'…':n.name);});});var zoom=d3.zoom().scaleExtent([.2,4]).on('zoom',function(e){g.attr('transform',e.transform);});svg.call(zoom);SZ=zoom;sn('Cluster layout');}
+function buildTimeline(){if(!D)return;var svg=d3.select('#gsvg');svg.selectAll('*').remove();var W=svg.node().clientWidth||700,H=svg.node().clientHeight||500;var g=svg.append('g');var tl=D.timeline||[];if(!tl.length){sn('No timeline');return;}var margin=70,uw=tl.length>1?(W-margin*2)/(tl.length-1):0,midY=H/2;g.append('line').attr('x1',margin).attr('y1',midY).attr('x2',W-margin).attr('y2',midY).attr('stroke','rgba(255,255,255,.14)').attr('stroke-width',2);tl.forEach(function(t,i){var x=margin+i*uw,above=i%2===0,yoff=above?-90:90;g.append('line').attr('x1',x).attr('y1',midY).attr('x2',x).attr('y2',midY+yoff*.5).attr('stroke',t.color).attr('stroke-width',1.5).attr('stroke-dasharray','3,3');g.append('circle').attr('cx',x).attr('cy',midY).attr('r',8).attr('fill',t.color).style('filter','drop-shadow(0 0 6px '+t.color+')');var fo=g.append('foreignObject').attr('x',x-60).attr('y',midY+yoff-(above?65:0)).attr('width',120).attr('height',75);var div=document.createElementNS('http://www.w3.org/1999/xhtml','div');div.style.cssText='font-family:Inter,sans-serif;font-size:10px;color:#8b949e;text-align:center;line-height:1.4';div.innerHTML='<strong style="color:'+t.color+';font-size:11px">'+esc(t.year)+'</strong><br>'+esc(t.desc);fo.node().appendChild(div);});g.append('text').attr('x',W/2).attr('y',22).attr('text-anchor','middle').attr('fill','#484f58').attr('font-size',11).attr('font-family','Inter,sans-serif').text(Q+' — Civilization Impact');var zoom=d3.zoom().scaleExtent([.3,3]).on('zoom',function(e){g.attr('transform',e.transform);});svg.call(zoom);SZ=zoom;sn('Timeline view');}
+function setView(m,i){document.querySelectorAll('#hnav .nb').forEach(function(b){b.classList.remove('on');});document.getElementById('nv'+i).classList.add('on');var show={explore:['secgaps','sechyps','secsim'],gaps:['secgaps'],hypotheses:['sechyps'],simulate:['secsim']};['secgaps','sechyps','secsim'].forEach(function(id){var s=document.getElementById(id);if(s)s.style.display=(!show[m]||show[m].indexOf(id)>=0)?'block':'none';});sn('View: '+m[0].toUpperCase()+m.slice(1));}
+function openCompare(){if(!D){sn('Run a search first');return;}closeOverlay();document.getElementById('cmpv').classList.add('on');document.getElementById('gsvg').style.visibility='hidden';document.querySelectorAll('.gctrls,.gleg,.mtog,.ghint').forEach(function(e){e.style.display='none';});var fields=[];D.nodes.forEach(function(n){if(fields.indexOf(n.field)<0)fields.push(n.field);});var h='';fields.forEach(function(f){var fn=D.nodes.filter(function(n){return n.field===f;});var tp=fn.reduce(function(a,n){return a+(n.papers||0);},0);var gc=fn.filter(function(n){return n.gap;}).length;var cn=D.links.filter(function(l){return fn.some(function(n){return n.id===l[0]||n.id===l[1];});}).length;h+='<div class="cmc"><div class="cmh" style="color:'+fc(f)+'">'+esc(f)+'</div><div class="cmrow"><span class="cmk">Concepts</span><span class="cmv">'+fn.length+'</span></div><div class="cmrow"><span class="cmk">Papers</span><span class="cmv">'+tp.toLocaleString()+'</span></div><div class="cmrow"><span class="cmk">Links</span><span class="cmv">'+cn+'</span></div><div class="cmrow"><span class="cmk">Gaps</span><span class="cmv" style="color:var(--pu)">'+gc+'</span></div><div class="cmrow"><span class="cmk">Opportunity</span><span class="cmv" style="color:'+(gc>0?'var(--re)':'var(--gr)')+'">'+( gc>0?'HIGH':'Studied')+'</span></div></div>';});document.getElementById('cmg').innerHTML=h;}
+function openMetrics(){if(!D){sn('Run a search first');return;}closeOverlay();document.getElementById('metv').classList.add('on');document.getElementById('gsvg').style.visibility='hidden';document.querySelectorAll('.gctrls,.gleg,.mtog,.ghint').forEach(function(e){e.style.display='none';});var totalP=D.nodes.reduce(function(a,n){return a+(n.papers||0);},0);var gapN=D.nodes.filter(function(n){return n.gap;}).length;var fields=[];D.nodes.forEach(function(n){if(fields.indexOf(n.field)<0)fields.push(n.field);});var rc=D._realPapers?D._realPapers.length:0;document.getElementById('metgrid').innerHTML='<div class="metcard"><div class="metval" style="color:var(--ac)">'+totalP.toLocaleString()+'</div><div class="metlbl">Total Papers Indexed</div><div class="metbar"><div class="metfill" style="width:78%;background:var(--ac)"></div></div><div class="metsub">Across '+fields.length+' research fields</div></div><div class="metcard"><div class="metval" style="color:var(--pu)">'+gapN+'</div><div class="metlbl">Knowledge Gaps Detected</div><div class="metbar"><div class="metfill" style="width:'+Math.round(gapN/Math.max(D.nodes.length,1)*100)+'%;background:var(--pu)"></div></div><div class="metsub">'+Math.round(gapN/Math.max(D.nodes.length,1)*100)+'% unexplored</div></div><div class="metcard"><div class="metval" style="color:var(--gr)">'+rc+'</div><div class="metlbl">Real Papers Loaded</div><div class="metbar"><div class="metfill" style="width:'+Math.min(100,rc*8)+'%;background:var(--gr)"></div></div><div class="metsub">Live from Semantic Scholar API</div></div><div class="metcard"><div class="metval" style="color:var(--or)">'+(D.hypotheses?D.hypotheses.length:0)+'</div><div class="metlbl">Novel Hypotheses</div><div class="metbar"><div class="metfill" style="width:'+((D.hypotheses?D.hypotheses.length:0)*25)+'%;background:var(--or)"></div></div><div class="metsub">AI-generated, validated</div></div>';var sorted=D.nodes.slice().sort(function(a,b){return(b.papers||0)-(a.papers||0);}).slice(0,6);var maxP=sorted[0]?sorted[0].papers||1:1;var db='';sorted.forEach(function(n){var p=Math.round((n.papers||0)/maxP*100);db+='<div class="densrow"><div class="denshead"><span>'+esc(n.name)+'</span><span>'+((n.papers||0)).toLocaleString()+'</span></div><div class="densbar-wrap"><div class="densfill" style="width:'+p+'%;background:'+(n.gap?'var(--pu)':fc(n.field))+'"></div></div></div>';});document.getElementById('densbar').innerHTML=db;}
+function closeOverlay(){document.getElementById('cmpv').classList.remove('on');document.getElementById('metv').classList.remove('on');document.getElementById('gsvg').style.visibility='visible';document.querySelectorAll('.gctrls,.gleg,.ghint').forEach(function(e){e.style.display='';});document.querySelector('.mtog').style.display='flex';}
+function toggleExport(){var ep=document.getElementById('expp');ep.style.display=(ep.style.display==='none'||!ep.style.display)?'block':'none';}
+function exJSON(){if(!D){sn('Run a search first');return;}var obj={query:Q,generated:new Date().toISOString(),nodes:D.nodes,links:D.links,gaps:D.gaps,hypotheses:D.hypotheses,timeline:D.timeline,realPapers:(D._realPapers||[]).map(function(p){return{title:p.title,authors:authorStr(p),year:p.year,citations:p.citationCount,url:paperUrl(p),doi:p.externalIds&&p.externalIds.DOI};})};var b=new Blob([JSON.stringify(obj,null,2)],{type:'application/json'});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='genesis-'+Q.replace(/\s+/g,'-')+'.json';a.click();sn('JSON exported ✓');}
+function exCSV(){if(!D){sn('Run a search first');return;}var rows=['id,name,field,papers,gap,core'];D.nodes.forEach(function(n){rows.push(n.id+',"'+n.name+'","'+n.field+'",'+(n.papers||0)+','+!!n.gap+','+!!n.core);});var b=new Blob([rows.join('\n')],{type:'text/csv'});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='genesis-'+Q.replace(/\s+/g,'-')+'.csv';a.click();sn('CSV exported ✓');}
+function exSVG(){var s=document.getElementById('gsvg');var b=new Blob([new XMLSerializer().serializeToString(s)],{type:'image/svg+xml'});var a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='genesis-'+Q.replace(/\s+/g,'-')+'.svg';a.click();sn('SVG exported ✓');}
+function cpReport(){if(!D){sn('Run a search first');return;}var lines=['GENESIS RESEARCH REPORT','='.repeat(50),'Query: '+Q,'Generated: '+new Date().toLocaleDateString(),'Real papers loaded: '+((D._realPapers||[]).length),''];(D._realPapers||[]).slice(0,5).forEach(function(p,i){lines.push('['+(i+1)+'] '+p.title);lines.push('    '+authorStr(p)+(p.year?', '+p.year:'')+' — ×'+(p.citationCount||0)+' citations');lines.push('    '+paperUrl(p));lines.push('');});lines.push('KNOWLEDGE GAPS:');(D.gaps||[]).forEach(function(g,i){lines.push((i+1)+'. '+g.title+': '+g.desc);});lines.push('');lines.push('HYPOTHESES:');(D.hypotheses||[]).forEach(function(h,i){lines.push((i+1)+'. '+h.title+': '+h.desc);});navigator.clipboard.writeText(lines.join('\n')).then(function(){sn('Report with real papers copied ✓','rgba(63,185,80,.5)');});}
+function toggleTheme(){LIGHTMODE=!LIGHTMODE;var r=document.documentElement;if(LIGHTMODE){r.style.setProperty('--bg','#f4f5f7');r.style.setProperty('--bg2','#fff');r.style.setProperty('--bg3','#f0f2f5');r.style.setProperty('--bg4','#e8eaed');r.style.setProperty('--tx','#1a1a2e');r.style.setProperty('--tx2','#4a4a6a');r.style.setProperty('--tx3','#8a8aaa');r.style.setProperty('--b1','rgba(0,0,0,.07)');r.style.setProperty('--b2','rgba(0,0,0,.14)');}else{r.style.setProperty('--bg','#030712');r.style.setProperty('--bg2','#0d1117');r.style.setProperty('--bg3','#161b22');r.style.setProperty('--bg4','#1c2230');r.style.setProperty('--tx','#e6edf3');r.style.setProperty('--tx2','#8b949e');r.style.setProperty('--tx3','#484f58');r.style.setProperty('--b1','rgba(255,255,255,.07)');r.style.setProperty('--b2','rgba(255,255,255,.14)');}sn(LIGHTMODE?'Light mode':'Dark mode');}
+// AI MODAL
+function openAIModal(ctx){
+  document.getElementById('aim').classList.add('on');
+  if(ctx){document.getElementById('art').innerHTML='<div class="ai-thinking"><div class="dots"><span></span><span></span><span></span></div>&nbsp;Analyzing '+esc(ctx)+'…</div>';callAI('In the context of "'+Q+'", tell me about "'+ctx+'" — its role in the knowledge graph, what unexplored gaps connect to it, and what the key research opportunities are. Be specific and mention real papers.');}
+  else{var rp=(D&&D._realPapers&&D._realPapers.length)?D._realPapers.slice(0,3).map(function(p){return '"'+p.title+'" ('+p.year+')'}).join('; '):'none loaded yet';document.getElementById('art').innerHTML='<h4>Genesis AI — '+esc(Q||'Knowledge Graph')+'</h4><p>I have the live graph and '+(D&&D._realPapers?D._realPapers.length:'0')+' real papers from Semantic Scholar.</p><p>Top papers: '+esc(rp)+'</p><p>Ask me anything about gaps, hypotheses, papers, or research directions.</p>';}
+  setTimeout(function(){document.getElementById('aiinp').focus();},50);
+}
+function closeAI(){document.getElementById('aim').classList.remove('on');}
+async function callAI(q){
+  var ctx=D?('Graph for "'+Q+'". Nodes: '+D.nodes.map(function(n){return n.name+(n.gap?' [GAP]':'');}).join(', ')+'. Real papers: '+((D._realPapers||[]).slice(0,3).map(function(p){return p.title+' ('+p.year+')'}).join('; '))):'';
+  try{
+    var r=await fetch('https://api.anthropic.com/v1/messages',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({model:'claude-sonnet-4-6',max_tokens:600,messages:[{role:'user',content:ctx+'\n\nQuestion: '+q+'\n\nAnswer in 3-4 paragraphs. Use <h4> for section headers. Be specific, cite real papers.'}]})});
+    var data=await r.json();document.getElementById('art').innerHTML=data.content[0].text;document.getElementById('abdy').scrollTop=9999;
+  }catch(e){document.getElementById('art').innerHTML='<p style="color:var(--re)">Error: '+esc(e.message)+'</p>';}
+}
+function sendAI(){var inp=document.getElementById('aiinp'),q=inp.value.trim();if(!q)return;inp.value='';document.getElementById('art').innerHTML='<div class="ai-thinking"><div class="dots"><span></span><span></span><span></span></div>&nbsp;Thinking…</div>';callAI(q);}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){closeAI();closeOverlay();closePM();}});
 document.getElementById('hi').addEventListener('keydown',function(e){if(e.key==='Enter')go();});
 document.getElementById('msin').addEventListener('keydown',function(e){if(e.key==='Enter')runMini();});
 document.getElementById('aiinp').addEventListener('keydown',function(e){if(e.key==='Enter')sendAI();});
